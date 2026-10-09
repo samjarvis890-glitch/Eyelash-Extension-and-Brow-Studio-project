@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lookbook &amp; Beauty Gallery — LUMIÈRE Lash &amp; Brow Studio</title>
+  <meta name="description" content="Explore The Lumière Lookbook — an editorial portfolio of handcrafted lash extensions, brow refinement, macro textures, and diverse beauty moods.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-gallery">
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Same structure & behavior across LUMIÈRE website)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Approved LUMIÈRE Brand Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Only ONE dropdown: HOME -->
+          <li class="dropdown-parent">
+            <a href="index.html" class="nav-link-item" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item active">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="false">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link active">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — THE LUMIÈRE LOOKBOOK (Unique Editorial Lookbook Cover)
+         ========================================================================== -->
+    <section class="gallery-intro-section" id="gallery-intro" aria-labelledby="galleryIntroTitle">
+      <div class="container-lumiere">
+        <div class="gallery-intro-grid">
+          
+          <!-- Editorial Column -->
+          <div class="gallery-intro-content">
+            <div class="lookbook-issue-badge">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <span>THE LUMIÈRE LOOKBOOK</span>
+            </div>
+            
+            <h1 class="gallery-intro-title" id="galleryIntroTitle">
+              A COLLECTION OF BEAUTIFUL DETAILS.
+            </h1>
+            
+            <p class="gallery-intro-desc">
+              Explore the looks, textures and finishes that capture the Lumière aesthetic — refined, expressive and beautifully personal.
+            </p>
+            
+            <div class="gallery-intro-actions">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-outline-custom">
+                EXPLORE SERVICES
+              </a>
+            </div>
+
+            <div class="lookbook-specs-row">
+              <div class="lookbook-spec-item">
+                <span class="spec-num">24</span>
+                <span class="spec-label">Curated Studies</span>
+              </div>
+              <div class="lookbook-spec-item">
+                <span class="spec-num">100%</span>
+                <span class="spec-label">Bespoke Artistry</span>
+              </div>
+              <div class="lookbook-spec-item">
+                <span class="spec-num">HD</span>
+                <span class="spec-label">Editorial Finish</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cover Image Frame with Editorial Accent -->
+          <div class="gallery-intro-visual">
+            <div class="lookbook-cover-frame" data-lightbox-src="assets/images/gallery/gallery-intro.webp" data-lightbox-caption="The Lumière Lookbook — Cover Study">
+              <div class="lookbook-img-wrapper">
+                <picture>
+                  <source srcset="assets/images/gallery/gallery-intro.webp" type="image/webp">
+                  <img src="assets/images/gallery/gallery-intro.jpg" 
+                       alt="Lumière Lookbook Cover Portrait — Refined natural lashes and brow framing"
+                       width="896" 
+                       height="1200"
+                       fetchpriority="high">
+                </picture>
+                <div class="gallery-zoom-icon" aria-hidden="true">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </div>
+              </div>
+              <div class="lookbook-floating-caption">
+                <span class="caption-look-title">LUMIÈRE / LOOKBOOK 01</span>
+                <span class="caption-look-tag">THE SIGNATURE EDIT</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — THE LASH PORTRAITS (4-Item Uniform Grid)
+         ========================================================================== -->
+    <section class="lash-gallery-section" id="lash-gallery" aria-labelledby="lashGalleryTitle">
+      <div class="container-lumiere">
+        
+        <header class="gallery-section-header">
+          <span class="gallery-eyebrow">VISUAL STUDIES</span>
+          <h2 class="gallery-section-title" id="lashGalleryTitle">THE LASH PORTRAITS</h2>
+          <p class="gallery-section-desc">
+            Different eyes, different moods, different ways to define your look.
+          </p>
+        </header>
+
+        <div class="lash-masonry-grid">
+          
+          <!-- Item 01: Soft Definition -->
+          <figure class="gallery-card lash-item" data-lightbox-src="assets/images/gallery/lash-gallery-01.webp" data-lightbox-caption="01 / SOFT DEFINITION — Natural refined lash texture">
+            <picture>
+              <source srcset="assets/images/gallery/lash-gallery-01.webp" type="image/webp">
+              <img src="assets/images/gallery/lash-gallery-01.jpg" 
+                   alt="Lash Portrait Study 01 — Soft Definition with natural lash curvature"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">LOOKBOOK STUDY 01</span>
+              <h3 class="gallery-caption-title">SOFT DEFINITION</h3>
+              <p class="gallery-caption-desc">Delicate natural lash curvature.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Item 02: Textured Finish -->
+          <figure class="gallery-card lash-item" data-lightbox-src="assets/images/gallery/lash-gallery-02.webp" data-lightbox-caption="02 / TEXTURED FINISH — Natural variation and refined dimension">
+            <picture>
+              <source srcset="assets/images/gallery/lash-gallery-02.webp" type="image/webp">
+              <img src="assets/images/gallery/lash-gallery-02.jpg" 
+                   alt="Lash Portrait Study 02 — Textured Finish with multi-layered lash dimension"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">LOOKBOOK STUDY 02</span>
+              <h3 class="gallery-caption-title">TEXTURED FINISH</h3>
+              <p class="gallery-caption-desc">Multi-layered lash dimension.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Item 03: Clean Volume -->
+          <figure class="gallery-card lash-item" data-lightbox-src="assets/images/gallery/lash-gallery-03.webp" data-lightbox-caption="03 / CLEAN VOLUME — Refined eye makeup and balanced fullness">
+            <picture>
+              <source srcset="assets/images/gallery/lash-gallery-03.webp" type="image/webp">
+              <img src="assets/images/gallery/lash-gallery-03.jpg" 
+                   alt="Lash Portrait Study 03 — Clean Volume lash fan definition"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">LOOKBOOK STUDY 03</span>
+              <h3 class="gallery-caption-title">CLEAN VOLUME</h3>
+              <p class="gallery-caption-desc">Refined fullness and precision.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Item 04: Airy Dimension -->
+          <figure class="gallery-card lash-item" data-lightbox-src="assets/images/gallery/lash-gallery-04.webp" data-lightbox-caption="04 / AIRY DIMENSION — Delicate realistic lash texture">
+            <picture>
+              <source srcset="assets/images/gallery/lash-gallery-04.webp" type="image/webp">
+              <img src="assets/images/gallery/lash-gallery-04.jpg" 
+                   alt="Lash Portrait Study 04 — Airy Dimension with delicate upward lift"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">LOOKBOOK STUDY 04</span>
+              <h3 class="gallery-caption-title">AIRY DIMENSION</h3>
+              <p class="gallery-caption-desc">Delicate upward lift and flow.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — THE BROW PORTRAITS (4-Item Uniform Brow Gallery)
+         ========================================================================== -->
+    <section class="brow-gallery-section" id="brow-gallery" aria-labelledby="browGalleryTitle">
+      <div class="container-lumiere">
+        
+        <header class="gallery-section-header">
+          <span class="gallery-eyebrow">ARCHITECTURAL REFINEMENT</span>
+          <h2 class="gallery-section-title" id="browGalleryTitle">THE BROW PORTRAITS</h2>
+          <p class="gallery-section-desc">
+            Small changes can create a beautifully balanced expression.
+          </p>
+        </header>
+
+        <div class="brow-grid-uniform">
+          
+          <!-- Brow 01: The Harmonic Arch -->
+          <figure class="gallery-card brow-card" data-lightbox-src="assets/images/gallery/brow-gallery-main.webp" data-lightbox-caption="01 / THE HARMONIC ARCH — Tailored symmetry and natural arch definition">
+            <picture>
+              <source srcset="assets/images/gallery/brow-gallery-main.webp" type="image/webp">
+              <img src="assets/images/gallery/brow-gallery-main.jpg" 
+                   alt="Brow Portrait Study 01 — Harmonic Arch symmetry"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">BROW STUDY 01</span>
+              <h3 class="gallery-caption-title">THE HARMONIC ARCH</h3>
+              <p class="gallery-caption-desc">Tailored facial symmetry.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Brow 02: Shape Refinement -->
+          <figure class="gallery-card brow-card" data-lightbox-src="assets/images/gallery/brow-gallery-detail-01.webp" data-lightbox-caption="02 / SHAPE REFINEMENT — Individual hair micro-feathering">
+            <picture>
+              <source srcset="assets/images/gallery/brow-gallery-detail-01.webp" type="image/webp">
+              <img src="assets/images/gallery/brow-gallery-detail-01.jpg" 
+                   alt="Brow Detail Study 02 — Shape Refinement"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">BROW STUDY 02</span>
+              <h3 class="gallery-caption-title">SHAPE REFINEMENT</h3>
+              <p class="gallery-caption-desc">Individual hair micro-feathering.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Brow 03: Structure & Lift -->
+          <figure class="gallery-card brow-card" data-lightbox-src="assets/images/gallery/brow-gallery-detail-02.webp" data-lightbox-caption="03 / STRUCTURE &amp; LIFT — Directional arch architecture">
+            <picture>
+              <source srcset="assets/images/gallery/brow-gallery-detail-02.webp" type="image/webp">
+              <img src="assets/images/gallery/brow-gallery-detail-02.jpg" 
+                   alt="Brow Detail Study 03 — Structure and Lift"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">BROW STUDY 03</span>
+              <h3 class="gallery-caption-title">STRUCTURE &amp; LIFT</h3>
+              <p class="gallery-caption-desc">Directional arch architecture.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Brow 04: Polished Finish -->
+          <figure class="gallery-card brow-card" data-lightbox-src="assets/images/gallery/brow-gallery-detail-03.webp" data-lightbox-caption="04 / POLISHED FINISH — Effortless brow and eyelid contour harmony">
+            <picture>
+              <source srcset="assets/images/gallery/brow-gallery-detail-03.webp" type="image/webp">
+              <img src="assets/images/gallery/brow-gallery-detail-03.jpg" 
+                   alt="Brow Detail Study 04 — Polished Finish"
+                   loading="lazy"
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">BROW STUDY 04</span>
+              <h3 class="gallery-caption-title">POLISHED FINISH</h3>
+              <p class="gallery-caption-desc">Effortless contour harmony.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — THE MOODBOARD (4 Unique Beauty Moods in Uniform Grid)
+         ========================================================================== -->
+    <section class="mood-gallery-section" id="mood-gallery" aria-labelledby="moodGalleryTitle">
+      <div class="container-lumiere">
+        
+        <header class="gallery-section-header">
+          <span class="gallery-eyebrow">EDITORIAL PALETTES</span>
+          <h2 class="gallery-section-title" id="moodGalleryTitle">THE MOODBOARD</h2>
+          <p class="gallery-section-desc">
+            Beauty can be quiet, polished, playful or expressive.
+          </p>
+        </header>
+
+        <div class="moodboard-staggered-grid">
+          
+          <!-- Mood 1: THE SOFT EDIT -->
+          <figure class="gallery-card mood-card" data-lightbox-src="assets/images/gallery/mood-soft.webp" data-lightbox-caption="THE SOFT EDIT — Delicate and understated feminine styling">
+            <picture>
+              <source srcset="assets/images/gallery/mood-soft.webp" type="image/webp">
+              <img src="assets/images/gallery/mood-soft.jpg" 
+                   alt="The Soft Edit Mood — Delicate, understated lashes and brows with warm cream lighting"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">MOOD 01</span>
+              <h3 class="gallery-caption-title">THE SOFT EDIT</h3>
+              <p class="gallery-caption-desc">Delicate and understated.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Mood 2: THE CLEAN EDIT -->
+          <figure class="gallery-card mood-card" data-lightbox-src="assets/images/gallery/mood-clean.webp" data-lightbox-caption="THE CLEAN EDIT — Minimal and refined modern beauty">
+            <picture>
+              <source srcset="assets/images/gallery/mood-clean.webp" type="image/webp">
+              <img src="assets/images/gallery/mood-clean.jpg" 
+                   alt="The Clean Edit Mood — Minimal, crisp lash definition and naturally groomed brows"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">MOOD 02</span>
+              <h3 class="gallery-caption-title">THE CLEAN EDIT</h3>
+              <p class="gallery-caption-desc">Minimal and refined.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Mood 3: THE ROMANTIC EDIT -->
+          <figure class="gallery-card mood-card" data-lightbox-src="assets/images/gallery/mood-romantic.webp" data-lightbox-caption="THE ROMANTIC EDIT — Softly expressive feminine flutter lashes and warm rose radiance">
+            <picture>
+              <source srcset="assets/images/gallery/mood-romantic.webp" type="image/webp">
+              <img src="assets/images/gallery/mood-romantic.jpg" 
+                   alt="The Romantic Edit Mood — Softly expressive feminine flutter lashes and warm rose radiance"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">MOOD 03</span>
+              <h3 class="gallery-caption-title">THE ROMANTIC EDIT</h3>
+              <p class="gallery-caption-desc">Softly expressive and feminine.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Mood 4: THE BOLD EDIT -->
+          <figure class="gallery-card mood-card" data-lightbox-src="assets/images/gallery/mood-bold.webp" data-lightbox-caption="THE BOLD EDIT — Confident, dramatic full volume lash depth and sculpted brow arches">
+            <picture>
+              <source srcset="assets/images/gallery/mood-bold.webp" type="image/webp">
+              <img src="assets/images/gallery/mood-bold.jpg" 
+                   alt="The Bold Edit Mood — Confident, dramatic full volume lash depth and sculpted brow arches"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">MOOD 04</span>
+              <h3 class="gallery-caption-title">THE BOLD EDIT</h3>
+              <p class="gallery-caption-desc">Confident and defined.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — THE DETAIL LIBRARY (4-Card Uniform Macro Studies)
+         ========================================================================== -->
+    <section class="detail-library-section" id="detail-library" aria-labelledby="detailLibraryTitle">
+      <div class="container-lumiere">
+        
+        <header class="gallery-section-header">
+          <span class="gallery-eyebrow">LOOK CLOSER.</span>
+          <h2 class="gallery-section-title" id="detailLibraryTitle">THE DETAIL LIBRARY</h2>
+          <p class="gallery-section-desc">
+            The subtle precision, curvature and textures that elevate everyday beauty into an art form.
+          </p>
+        </header>
+
+        <div class="detail-macro-grid">
+          
+          <!-- Detail 01: CURVE -->
+          <figure class="gallery-card detail-card" data-lightbox-src="assets/images/gallery/detail-01.webp" data-lightbox-caption="01 / PRECISION CURVE — Precision lash fan curvature and multi-length curl dynamics">
+            <picture>
+              <source srcset="assets/images/gallery/detail-01.webp" type="image/webp">
+              <img src="assets/images/gallery/detail-01.jpg" 
+                   alt="Macro Detail 01 — Precision lash fan curvature and multi-length curl dynamics"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">DETAIL STUDY 01</span>
+              <h3 class="gallery-caption-title">PRECISION CURVE</h3>
+              <p class="gallery-caption-desc">Micro-fan curvature dynamics.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Detail 02: TEXTURE -->
+          <figure class="gallery-card detail-card" data-lightbox-src="assets/images/gallery/detail-02.webp" data-lightbox-caption="02 / ORGANIC TEXTURE — Micro-hair direction and organic brow texture">
+            <picture>
+              <source srcset="assets/images/gallery/detail-02.webp" type="image/webp">
+              <img src="assets/images/gallery/detail-02.jpg" 
+                   alt="Macro Detail 02 — Eyebrow hair texture study with natural directional growth"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">DETAIL STUDY 02</span>
+              <h3 class="gallery-caption-title">ORGANIC TEXTURE</h3>
+              <p class="gallery-caption-desc">Individual hair micro-direction.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Detail 03: PRECISION -->
+          <figure class="gallery-card detail-card" data-lightbox-src="assets/images/gallery/detail-03.webp" data-lightbox-caption="03 / SEAMLESS ROOT — Seamless root placement along the eyelid margin">
+            <picture>
+              <source srcset="assets/images/gallery/detail-03.webp" type="image/webp">
+              <img src="assets/images/gallery/detail-03.jpg" 
+                   alt="Macro Detail 03 — Seamless lashline root placement and isolation along eyelid margin"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">DETAIL STUDY 03</span>
+              <h3 class="gallery-caption-title">SEAMLESS ROOT</h3>
+              <p class="gallery-caption-desc">Precision eyelid attachment.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Detail 04: SOFTNESS -->
+          <figure class="gallery-card detail-card" data-lightbox-src="assets/images/gallery/detail-04.webp" data-lightbox-caption="04 / STUDIO CRAFT — Silk fibres and ergonomic precision tools">
+            <picture>
+              <source srcset="assets/images/gallery/detail-04.webp" type="image/webp">
+              <img src="assets/images/gallery/detail-04.jpg" 
+                   alt="Macro Detail 04 — Professional studio tweezers, silk lash trays and precision tools"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">DETAIL STUDY 04</span>
+              <h3 class="gallery-caption-title">STUDIO CRAFT</h3>
+              <p class="gallery-caption-desc">Silk fibres &amp; ergonomic craft.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — THE LUMIÈRE EDITORIAL (4-Card Uniform Grid)
+         ========================================================================== -->
+    <section class="editorial-gallery-section" id="editorial-gallery" aria-labelledby="editorialGalleryTitle">
+      <div class="container-lumiere">
+        
+        <header class="gallery-section-header">
+          <span class="gallery-eyebrow">EDITORIAL SPOTLIGHT</span>
+          <h2 class="gallery-section-title" id="editorialGalleryTitle">IN THE LUMIÈRE LIGHT</h2>
+          <p class="gallery-section-desc">
+            Moments captured in natural beauty, thoughtful light and timeless confidence.
+          </p>
+        </header>
+
+        <div class="editorial-layout-grid">
+          
+          <!-- Card 01: Essential Light -->
+          <figure class="gallery-card editorial-card" data-lightbox-src="assets/images/gallery/editorial-01.webp" data-lightbox-caption="01 / ESSENTIAL LIGHT — Natural radiant studio beauty portrait">
+            <picture>
+              <source srcset="assets/images/gallery/editorial-01.webp" type="image/webp">
+              <img src="assets/images/gallery/editorial-01.jpg" 
+                   alt="Campaign Study 01 — Essential Light natural radiant studio beauty portrait"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">CAMPAIGN STUDY 01</span>
+              <h3 class="gallery-caption-title">ESSENTIAL LIGHT</h3>
+              <p class="gallery-caption-desc">Natural radiant studio focus.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Card 02: Radiant Grace -->
+          <figure class="gallery-card editorial-card" data-lightbox-src="assets/images/gallery/editorial-02.webp" data-lightbox-caption="02 / RADIANT GRACE — Subtle shadow and expressive beauty portrait">
+            <picture>
+              <source srcset="assets/images/gallery/editorial-02.webp" type="image/webp">
+              <img src="assets/images/gallery/editorial-02.jpg" 
+                   alt="Campaign Study 02 — Radiant Grace subtle shadow and expressive beauty portrait"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">CAMPAIGN STUDY 02</span>
+              <h3 class="gallery-caption-title">RADIANT GRACE</h3>
+              <p class="gallery-caption-desc">Subtle shadow &amp; expression.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Card 03: Studio Finish -->
+          <figure class="gallery-card editorial-card" data-lightbox-src="assets/images/gallery/editorial-03.webp" data-lightbox-caption="03 / STUDIO FINISH — Post-treatment confidence and mirror glow portrait">
+            <picture>
+              <source srcset="assets/images/gallery/editorial-03.webp" type="image/webp">
+              <img src="assets/images/gallery/editorial-03.jpg" 
+                   alt="Campaign Study 03 — Studio Finish post-treatment confidence and mirror glow portrait"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">CAMPAIGN STUDY 03</span>
+              <h3 class="gallery-caption-title">STUDIO FINISH</h3>
+              <p class="gallery-caption-desc">Post-treatment confidence.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Card 04: Timeless Beauty -->
+          <figure class="gallery-card editorial-card" data-lightbox-src="assets/images/gallery/editorial-04.webp" data-lightbox-caption="04 / TIMELESS BEAUTY — Effortless bespoke luxury portrait">
+            <picture>
+              <source srcset="assets/images/gallery/editorial-04.webp" type="image/webp">
+              <img src="assets/images/gallery/editorial-04.jpg" 
+                   alt="Campaign Study 04 — Timeless Beauty effortless bespoke luxury portrait"
+                   loading="lazy" 
+                   width="1024" 
+                   height="1280">
+            </picture>
+            <div class="gallery-zoom-icon" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></div>
+            <figcaption class="gallery-card-overlay">
+              <span class="gallery-caption-badge">CAMPAIGN STUDY 04</span>
+              <h3 class="gallery-caption-title">TIMELESS BEAUTY</h3>
+              <p class="gallery-caption-desc">Effortless bespoke finish.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7 — YOUR LOOK AWAITS (Unique Lookbook Closing CTA)
+         ========================================================================== -->
+    <section class="gallery-cta-section" id="gallery-cta" aria-labelledby="galleryCtaTitle">
+      <div class="container-lumiere">
+        
+        <div class="gallery-cta-card">
+          
+          <!-- Closing Visual Wrap -->
+          <div class="gallery-cta-img-wrap">
+            <picture>
+              <source srcset="assets/images/gallery/gallery-closing.webp" type="image/webp">
+              <img src="assets/images/gallery/gallery-closing.jpg" 
+                   alt="Lumière Studio Lookbook Closing — Bespoke beauty and effortless confidence"
+                   loading="lazy"
+                   width="1400" 
+                   height="800">
+            </picture>
+          </div>
+
+          <!-- Closing Editorial Panel -->
+          <div class="gallery-cta-content">
+            <span class="gallery-eyebrow">YOUR NEXT LOOK</span>
+            <h2 class="gallery-cta-title" id="galleryCtaTitle">
+              FIND THE DETAILS THAT FEEL LIKE YOU.
+            </h2>
+            <p class="gallery-cta-desc">
+              Save the looks that inspire you, explore the services behind them and choose your next Lumière moment.
+            </p>
+            <div class="gallery-cta-actions">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-outline-custom">
+                VIEW SERVICES
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       ACCESSIBLE IMAGE LIGHTBOX MODAL (Vanilla JS, Full Keyboard & Focus Support)
+       ========================================================================== -->
+  <div class="gallery-lightbox-modal" id="galleryLightboxModal" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer" aria-hidden="true">
+    <button type="button" class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous Lookbook Image">
+      <i class="bi bi-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next Lookbook Image">
+      <i class="bi bi-chevron-right" aria-hidden="true"></i>
+    </button>
+
+    <div class="lightbox-content-wrap">
+      <div class="lightbox-img-container">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <div class="lightbox-caption-bar">
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-counter" id="lightboxCounter"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Identical to index.html & global design system)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html#policies" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

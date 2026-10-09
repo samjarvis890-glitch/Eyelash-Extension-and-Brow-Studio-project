@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing &amp; Beauty Investment Menu — LUMIÈRE Lash &amp; Brow Studio</title>
+  <meta name="description" content="Explore the Lumière beauty investment guide and service menu. Bespoke eyelash extensions, lash lifting, and brow styling transparently presented.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-pricing">
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Exact same structure & behavior across LUMIÈRE website)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Approved LUMIÈRE Brand Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Only ONE dropdown: HOME -->
+          <li class="dropdown-parent">
+            <a href="index.html" class="nav-link-item" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item active" aria-current="page">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="false">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link active">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — PRICING INTRO (The Lumière Menu Cover Composition)
+         ========================================================================== -->
+    <section class="pricing-intro-section" id="pricing-intro" aria-labelledby="pricingIntroTitle">
+      <div class="container-lumiere">
+        
+        <div class="pricing-intro-grid">
+          
+          <!-- Left: Editorial Menu Presentation Cover -->
+          <div class="pricing-menu-cover">
+            
+            <div class="menu-cover-badge-row">
+              <span class="menu-edition-pill">
+                <i class="bi bi-gem" aria-hidden="true"></i> The Lumière Menu
+              </span>
+              <span class="menu-doc-number">Guide N&deg; 04 / Investment</span>
+            </div>
+
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>THE LUMIÈRE MENU</span>
+            </div>
+
+            <h1 class="pricing-intro-title" id="pricingIntroTitle">
+              BEAUTY, CLEARLY<br>CONSIDERED.
+            </h1>
+
+            <p class="pricing-intro-lead">
+              Explore the Lumière service menu with clear options designed around lashes, brows and the details that make your look feel like yours.
+            </p>
+
+            <div class="pricing-intro-actions">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-secondary-custom">
+                EXPLORE SERVICES
+              </a>
+            </div>
+
+            <div class="pricing-intro-meta-bar">
+              <div class="intro-meta-item">
+                <span class="intro-meta-num">01</span>
+                <span class="intro-meta-label">Bespoke Design</span>
+              </div>
+              <div class="intro-meta-item">
+                <span class="intro-meta-num">02</span>
+                <span class="intro-meta-label">Transparent Menu</span>
+              </div>
+              <div class="intro-meta-item">
+                <span class="intro-meta-num">03</span>
+                <span class="intro-meta-label">Tailored Finish</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Vertical Editorial Beauty Portrait -->
+          <div class="pricing-intro-media">
+            <div class="pricing-intro-frame">
+              <picture>
+                <source srcset="assets/images/pricing/pricing-intro.webp" type="image/webp">
+                <img src="assets/images/pricing/pricing-intro.jpg" 
+                     alt="Editorial portrait showcasing refined natural lash extensions and sculpted brow architecture" 
+                     class="pricing-intro-img" 
+                     width="1200" 
+                     height="1600" 
+                     fetchpriority="high" 
+                     loading="eager">
+              </picture>
+              <div class="pricing-intro-floating-tag">
+                <div>
+                  <div class="floating-tag-title">Curated Investment</div>
+                  <div class="floating-tag-sub">Lash &amp; Brow Studio Collection</div>
+                </div>
+                <i class="bi bi-stars" style="color: var(--color-rose-gold); font-size: 1.3rem;" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2 — LASH EXTENSION MENU (lash-pricing)
+         ========================================================================== -->
+    <section class="lash-pricing-section" id="lash-pricing" aria-labelledby="lashPricingTitle">
+      <div class="container-lumiere">
+        
+        <div class="lash-pricing-grid">
+          
+          <!-- Left: Sticky Editorial Header & Visual -->
+          <div class="lash-pricing-sidebar">
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>CHOOSE YOUR FINISH</span>
+            </div>
+            
+            <h2 class="lash-vertical-title" id="lashPricingTitle">
+              LASH<br>EXTENSIONS
+            </h2>
+            
+            <p class="lash-sidebar-desc">
+              Every set is individually mapped to your eye geometry, natural lash density, and daily aesthetic. Select your desired depth and texture.
+            </p>
+
+            <div class="lash-sidebar-visual">
+              <picture>
+                <source srcset="assets/images/pricing/pricing-lashes.webp" type="image/webp">
+                <img src="assets/images/pricing/pricing-lashes.jpg" 
+                     alt="Macro close-up of individually placed bespoke silk eyelash extensions" 
+                     class="lash-sidebar-img" 
+                     width="1400" 
+                     height="1050" 
+                     loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Right: Refined Dotted Price Menu List -->
+          <div class="lash-menu-list" role="list">
+            
+            <!-- Item 1: CLASSIC -->
+            <article class="lash-menu-row" role="listitem">
+              <div class="lash-menu-header-line">
+                <div class="lash-menu-name-wrap">
+                  <h3 class="lash-menu-name">CLASSIC</h3>
+                  <span class="lash-menu-tag">Natural Definition</span>
+                </div>
+                <span class="lash-menu-leader" aria-hidden="true"></span>
+                <span class="lash-menu-price-val">PRICE TO BE CONFIRMED</span>
+              </div>
+              <p class="lash-menu-desc">
+                One-to-one individual lash placement that creates clean, elegant length and timeless mascara-like definition without excess weight.
+              </p>
+              <div class="lash-menu-attributes">
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> 1:1 Individual Application</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Natural Subtle Lift</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Everyday Elegance</span>
+              </div>
+            </article>
+
+            <!-- Item 2: HYBRID -->
+            <article class="lash-menu-row" role="listitem">
+              <div class="lash-menu-header-line">
+                <div class="lash-menu-name-wrap">
+                  <h3 class="lash-menu-name">HYBRID</h3>
+                  <span class="lash-menu-tag">Textured Harmony</span>
+                </div>
+                <span class="lash-menu-leader" aria-hidden="true"></span>
+                <span class="lash-menu-price-val">PRICE TO BE CONFIRMED</span>
+              </div>
+              <p class="lash-menu-desc">
+                A seamless blend of classic singles and delicate light-volume fans, delivering soft fluff, dimensional texture, and versatile fullness.
+              </p>
+              <div class="lash-menu-attributes">
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> 50/50 Classic &amp; Volume Mix</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Feathery Texture</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Balanced Dimension</span>
+              </div>
+            </article>
+
+            <!-- Item 3: VOLUME -->
+            <article class="lash-menu-row" role="listitem">
+              <div class="lash-menu-header-line">
+                <div class="lash-menu-name-wrap">
+                  <h3 class="lash-menu-name">VOLUME</h3>
+                  <span class="lash-menu-tag">Velvety Fullness</span>
+                </div>
+                <span class="lash-menu-leader" aria-hidden="true"></span>
+                <span class="lash-menu-price-val">PRICE TO BE CONFIRMED</span>
+              </div>
+              <p class="lash-menu-desc">
+                Handcrafted ultra-fine lightweight fans placed on each natural lash for a dense, velvety lash line with maximum depth and soft presence.
+              </p>
+              <div class="lash-menu-attributes">
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Hand-Crafted Fans (3D–6D)</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Dense Dark Lash Line</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Weightless Cashmere Silk</span>
+              </div>
+            </article>
+
+            <!-- Item 4: WISPY -->
+            <article class="lash-menu-row" role="listitem">
+              <div class="lash-menu-header-line">
+                <div class="lash-menu-name-wrap">
+                  <h3 class="lash-menu-name">WISPY</h3>
+                  <span class="lash-menu-tag">Dimensional Flutter</span>
+                </div>
+                <span class="lash-menu-leader" aria-hidden="true"></span>
+                <span class="lash-menu-price-val">PRICE TO BE CONFIRMED</span>
+              </div>
+              <p class="lash-menu-desc">
+                Artistic Kim-K and wet-look inspired mapping featuring varied spike lengths over a soft base layer for an airy, high-fashion flutter.
+              </p>
+              <div class="lash-menu-attributes">
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Dynamic Spike Mapping</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Modern Kim-K Effect</span>
+                <span class="lash-attr-pill"><i class="bi bi-check2"></i> Open-Eye Silhouette</span>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3 — LASH LIFT MENU (lash-lift-pricing)
+         ========================================================================== -->
+    <section class="lash-lift-pricing-section" id="lash-lift-pricing" aria-labelledby="lashLiftPricingTitle">
+      <div class="container-lumiere">
+        
+        <div class="lift-pricing-grid">
+          
+          <!-- Left: Large Horizontal Editorial Image -->
+          <div class="lift-pricing-media">
+            <div class="lift-media-frame">
+              <picture>
+                <source srcset="assets/images/pricing/pricing-lift.webp" type="image/webp">
+                <img src="assets/images/pricing/pricing-lift.jpg" 
+                     alt="Natural lash lift curvature treatment portrait showcasing gentle eye enhancement" 
+                     class="lift-media-img" 
+                     width="1600" 
+                     height="900" 
+                     loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Right: Focused Specification & Pricing Panel -->
+          <div class="lift-spec-card">
+            
+            <div class="section-eyebrow" style="margin-bottom: 0.8rem;">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>NATURAL ENHANCEMENT</span>
+            </div>
+
+            <div class="lift-service-header-row">
+              <h2 class="lift-service-name" id="lashLiftPricingTitle">LASH LIFT</h2>
+              <div class="lift-price-badge">
+                <span class="price-label">Service Investment</span>
+                <span class="price-figure">PRICE TO BE CONFIRMED</span>
+              </div>
+            </div>
+
+            <div class="lift-spec-headline">
+              A natural lift, beautifully finished.
+            </div>
+
+            <p class="lift-spec-desc">
+              Enhance your existing lashes from root to tip using gentle, nourishing solutions that elevate and curl for an effortlessly wide-awake look without extensions.
+            </p>
+
+            <div class="lift-includes-box">
+              <h3 class="lift-includes-title">Service Treatment Includes:</h3>
+              <ul class="lift-includes-list">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Lash preparation &amp; gentle conditioning</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Lift-focused treatment with custom silicone shield curvature</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Refined finishing with keratin infusion</li>
+              </ul>
+            </div>
+
+            <div class="lift-best-for-note">
+              <i class="bi bi-info-circle-fill" style="color: var(--color-rose-gold); font-size: 1.1rem; flex-shrink: 0;" aria-hidden="true"></i>
+              <div>
+                <strong>Best For:</strong> Those looking for a refined natural lash appearance that enhances your natural lashes with zero daily maintenance.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4 — THE BROW MENU (brow-pricing)
+         ========================================================================== -->
+    <section class="brow-pricing-section" id="brow-pricing" aria-labelledby="browPricingTitle">
+      <div class="container-lumiere">
+        
+        <div class="brow-pricing-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>PRECISION ARCHITECTURE &amp; STYLING</span>
+          </div>
+          <h2 class="section-title" id="browPricingTitle">THE BROW MENU</h2>
+          <p class="section-lead">
+            Curated brow sculpting tailored to your bone structure, hair flow, and personal expression.
+          </p>
+        </div>
+
+        <!-- Large Brow Photograph Banner -->
+        <div class="brow-hero-banner">
+          <picture>
+            <source srcset="assets/images/pricing/pricing-brow.webp" type="image/webp">
+            <img src="assets/images/pricing/pricing-brow.jpg" 
+                 alt="Precision groomed brow architecture showcasing natural feathered strokes and clean lines" 
+                 class="brow-hero-banner-img" 
+                 width="1400" 
+                 height="1050" 
+                 loading="lazy">
+          </picture>
+        </div>
+
+        <!-- 3 Clean Typography-Led Brow Cards -->
+        <div class="brow-menu-grid">
+          
+          <!-- Brow 1: SHAPING -->
+          <article class="brow-menu-card">
+            <div class="brow-card-top">
+              <span class="brow-card-tag">SHAPE</span>
+              <h3 class="brow-card-title">BROW SHAPING</h3>
+              <p class="brow-card-desc">
+                Custom architectural brow mapping, gentle tweezing, and precision clean-up designed to define your natural arch with balance and symmetry.
+              </p>
+            </div>
+            <div class="brow-card-bottom">
+              <span class="brow-card-label">Investment</span>
+              <span class="brow-card-price">PRICE TO BE CONFIRMED</span>
+            </div>
+          </article>
+
+          <!-- Brow 2: STYLING -->
+          <article class="brow-menu-card">
+            <div class="brow-card-top">
+              <span class="brow-card-tag">STYLE</span>
+              <h3 class="brow-card-title">BROW STYLING</h3>
+              <p class="brow-card-desc">
+                Tailored lamination or custom sculpting to realign brow hairs, giving sparse areas a fuller, brushed-up, and polished appearance.
+              </p>
+            </div>
+            <div class="brow-card-bottom">
+              <span class="brow-card-label">Investment</span>
+              <span class="brow-card-price">PRICE TO BE CONFIRMED</span>
+            </div>
+          </article>
+
+          <!-- Brow 3: DETAILING -->
+          <article class="brow-menu-card">
+            <div class="brow-card-top">
+              <span class="brow-card-tag">DETAIL</span>
+              <h3 class="brow-card-title">BROW DETAILING</h3>
+              <p class="brow-card-desc">
+                Custom semi-permanent tinting and refined feather finishing to add rich color depth, subtle tone harmony, and crisp definition.
+              </p>
+            </div>
+            <div class="brow-card-bottom">
+              <span class="brow-card-label">Investment</span>
+              <span class="brow-card-price">PRICE TO BE CONFIRMED</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5 — THE MAINTENANCE GUIDE (maintenance)
+         ========================================================================== -->
+    <section class="maintenance-section" id="maintenance" aria-labelledby="maintenanceTitle">
+      <div class="container-lumiere">
+        
+        <div class="maintenance-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>THE BEAUTY CYCLE</span>
+          </div>
+          <h2 class="section-title" id="maintenanceTitle">KEEPING YOUR LOOK FRESH.</h2>
+          <p class="section-lead">
+            Understanding how future appointments and personalized aftercare fit into your ongoing routine.
+          </p>
+        </div>
+
+        <div class="maintenance-cycle-container">
+          
+          <!-- Left: Beauty Cycle Still Life Visual -->
+          <div class="maintenance-visual-wrap">
+            <picture>
+              <source srcset="assets/images/pricing/pricing-maintenance.webp" type="image/webp">
+              <img src="assets/images/pricing/pricing-maintenance.jpg" 
+                   alt="Lash and brow beauty routine care objects and soft textures" 
+                   class="maintenance-visual-img" 
+                   width="1200" 
+                   height="1200" 
+                   loading="lazy">
+            </picture>
+          </div>
+
+          <!-- Right: 4 Cycle Quadrants -->
+          <div class="cycle-grid">
+            
+            <!-- Stage 1: MAINTENANCE -->
+            <article class="cycle-card">
+              <div class="cycle-card-step-badge">
+                <i class="bi bi-arrow-repeat" aria-hidden="true"></i> 01 / Routine
+              </div>
+              <h3 class="cycle-card-title">MAINTENANCE</h3>
+              <p class="cycle-card-text">
+                Future appointments can be planned according to your service, natural lash cycle and the guidance provided during your appointment.
+              </p>
+            </article>
+
+            <!-- Stage 2: REFRESH -->
+            <article class="cycle-card">
+              <div class="cycle-card-step-badge">
+                <i class="bi bi-stars" aria-hidden="true"></i> 02 / Refresh
+              </div>
+              <h3 class="cycle-card-title">REFRESH</h3>
+              <p class="cycle-card-text">
+                A future appointment can refresh your preferred look when you feel ready, ensuring lashes remain seamless and full.
+              </p>
+            </article>
+
+            <!-- Stage 3: BROW UPKEEP -->
+            <article class="cycle-card">
+              <div class="cycle-card-step-badge">
+                <i class="bi bi-brush" aria-hidden="true"></i> 03 / Upkeep
+              </div>
+              <h3 class="cycle-card-title">BROW UPKEEP</h3>
+              <p class="cycle-card-text">
+                Brow maintenance can be planned around how quickly your natural shape grows and changes over time.
+              </p>
+            </article>
+
+            <!-- Stage 4: CARE -->
+            <article class="cycle-card">
+              <div class="cycle-card-step-badge">
+                <i class="bi bi-shield-check" aria-hidden="true"></i> 04 / Care
+              </div>
+              <h3 class="cycle-card-title">CARE</h3>
+              <p class="cycle-card-text">
+                Following your individual aftercare guidance helps you care for the finished look and preserve retention.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="maintenance-cta-row">
+          <a href="contact.html?service=Bespoke+Lash+%26+Brow+Consultation#booking" class="btn-lumiere btn-secondary-custom">
+            TALK TO US ABOUT YOUR ROUTINE
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6 — GOOD TO KNOW (good-to-know)
+         ========================================================================== -->
+    <div id="faq"></div>
+    <div id="policies"></div>
+    <section class="good-to-know-section" id="good-to-know" aria-labelledby="goodToKnowTitle">
+      <div class="container-lumiere">
+        
+        <div class="good-to-know-grid">
+          
+          <!-- Left: Magazine-style Numbered Notes -->
+          <div class="editorial-notes-stack">
+            
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>INVESTMENT &amp; PREPARATION</span>
+            </div>
+
+            <h2 class="section-title" id="goodToKnowTitle">BEFORE YOU BOOK.</h2>
+
+            <!-- Note 01: PERSONALIZATION -->
+            <article class="editorial-note-item">
+              <span class="note-num">01</span>
+              <div class="note-body">
+                <h3 class="note-heading">PERSONALIZATION</h3>
+                <p class="note-body-text">
+                  Your final service choice may be adjusted according to your natural features, eye shape, and desired aesthetic outcome during your consultation.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 02: CONSULTATION -->
+            <article class="editorial-note-item">
+              <span class="note-num">02</span>
+              <div class="note-body">
+                <h3 class="note-heading">CONSULTATION</h3>
+                <p class="note-body-text">
+                  If you are unsure which direction suits you, discuss your preferences with our artists before your appointment to select the ideal styling.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 03: AFTERCARE -->
+            <article class="editorial-note-item">
+              <span class="note-num">03</span>
+              <div class="note-body">
+                <h3 class="note-heading">AFTERCARE</h3>
+                <p class="note-body-text">
+                  You will receive relevant aftercare guidance and product recommendations tailored specifically to your chosen service.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 04: PRICING CLARITY -->
+            <article class="editorial-note-item">
+              <span class="note-num">04</span>
+              <div class="note-body">
+                <h3 class="note-heading">PRICING CLARITY</h3>
+                <p class="note-body-text">
+                  If a service needs clarification before booking, contact the studio directly rather than guessing—we are delighted to assist.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Right: Editorial Preparation Photograph -->
+          <div class="good-to-know-media">
+            <div class="good-to-know-frame">
+              <picture>
+                <source srcset="assets/images/pricing/pricing-good-to-know.webp" type="image/webp">
+                <img src="assets/images/pricing/pricing-good-to-know.jpg" 
+                     alt="Lash and brow studio preparation details, precision tools and soft textures" 
+                     class="good-to-know-img" 
+                     width="1200" 
+                     height="1600" 
+                     loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7 — YOUR NEXT BEAUTY MOMENT (pricing-closing)
+         ========================================================================== -->
+    <section class="pricing-closing-section" id="pricing-closing" aria-labelledby="pricingClosingTitle">
+      <div class="container-lumiere">
+        
+        <div class="pricing-closing-card">
+          
+          <!-- Left: Text Panel -->
+          <div class="pricing-closing-content">
+            <span class="eyebrow">READY WHEN YOU ARE</span>
+            <h2 class="pricing-closing-title" id="pricingClosingTitle">
+              CHOOSE THE DETAILS THAT FEEL LIKE YOU.
+            </h2>
+            <p class="pricing-closing-desc">
+              Explore the services, consider the finish you want and make your next beauty appointment when the moment feels right.
+            </p>
+            <div class="pricing-closing-actions">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-secondary-custom">
+                EXPLORE SERVICES
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Cinematic Editorial Campaign Image -->
+          <div class="pricing-closing-media">
+            <picture>
+              <source srcset="assets/images/pricing/pricing-closing.webp" type="image/webp">
+              <img src="assets/images/pricing/pricing-closing.jpg" 
+                   alt="Serene beauty campaign portrait with bespoke lash and brow artistry" 
+                   class="pricing-closing-img" 
+                   width="1600" 
+                   height="900" 
+                   loading="lazy">
+            </picture>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Compact, Balanced, Social Icons, Aligned Columns)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html#policies" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

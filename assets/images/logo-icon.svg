@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+  <!-- Refined Outer Luxury Contour with Subtle Rose-Gold Accent -->
+  <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+  
+  <!-- Sculpted Brow Arch / Upper Harmony Contour -->
+  <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+  
+  <!-- Iconic Refined "L" Monogram with Sweeping Lash Curve -->
+  <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Delicate Lash Feather Contour -->
+  <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+  
+  <!-- Rose Gold Radiance Accent Dot -->
+  <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+</svg>

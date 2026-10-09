@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÈRE Lash &amp; Brow | Eyelash Extension &amp; Brow Studio</title>
+  <meta name="description" content="Refined eyelash extensions and beautifully shaped brows designed around your individual style and confidence.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Desktop + Mobile/Tablet Responsive Architecture)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Redesigned Unique Luxury Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Only ONE dropdown: HOME -->
+          <li class="dropdown-parent">
+            <a href="index.html" class="nav-link-item active" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="false">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls (Dark mode, RTL, Booking CTA inside drawer) -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — HERO
+         ========================================================================== -->
+    <section class="hero-section" aria-labelledby="heroTitle">
+      <div class="container-lumiere">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <span class="eyebrow">LUMIÈRE LASH &amp; BROW</span>
+            <h1 class="hero-title" id="heroTitle">
+              YOUR BEAUTY.<br>
+              <span>YOUR SIGNATURE.</span>
+            </h1>
+            <p class="hero-text">
+              Refined lashes and beautifully shaped brows, thoughtfully tailored to the way you want to feel.
+            </p>
+            <div class="hero-buttons">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-secondary-custom">
+                EXPLORE SERVICES
+              </a>
+            </div>
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <i class="bi bi-stars trust-icon" aria-hidden="true"></i>
+                <span class="trust-text">Bespoke Lash Design</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-shield-check trust-icon" aria-hidden="true"></i>
+                <span class="trust-text">Gentle Premium Care</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Image Frame -->
+          <div class="hero-media-wrap">
+            <div class="hero-image-frame">
+              <picture>
+                <source srcset="assets/images/home/hero.webp" type="image/webp">
+                <img src="assets/images/home/hero.jpg" 
+                     alt="Close-up luxury beauty editorial portrait showcasing refined natural lash extensions and soft feathered brow definition" 
+                     class="hero-image" 
+                     width="1920" 
+                     height="1200"
+                     fetchpriority="high"
+                     loading="eager">
+              </picture>
+              <div class="hero-floating-badge">
+                <div class="badge-icon">
+                  <i class="bi bi-gem" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="badge-label">LUMIÈRE SIGNATURE</div>
+                  <div class="badge-value">Custom Artistry</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — SIGNATURE BEAUTY (Strict Same-Row Alignment)
+         ========================================================================== -->
+    <section class="signature-section section-spacing-lg" aria-labelledby="signatureTitle">
+      <div class="container-lumiere">
+        
+        <div class="signature-header">
+          <span class="eyebrow eyebrow-center">THE SIGNATURE EDIT</span>
+          <h2 class="section-title" id="signatureTitle">Lashes and brows,<br>made beautifully yours.</h2>
+          <p class="section-lead" style="margin: 0 auto;">
+            Discover our core beauty aesthetics, meticulously styled and customized to enhance your natural facial architecture.
+          </p>
+        </div>
+
+        <!-- 5 Aligned Style Cards Grid -->
+        <div class="signature-grid">
+          
+          <!-- Card 1: CLASSIC -->
+          <article class="style-card">
+            <div class="style-card-img-wrap">
+              <picture>
+                <source srcset="assets/images/home/classic.webp" type="image/webp">
+                <img src="assets/images/home/classic.jpg" 
+                     alt="Classic natural eyelash extensions 1:1 individual application" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1500">
+              </picture>
+            </div>
+            <div class="style-card-content">
+              <span class="style-badge">Clean &amp; Pure</span>
+              <h3 class="style-title">CLASSIC</h3>
+              <p class="style-desc">Natural definition for an effortless everyday look.</p>
+              <a href="services.html" class="style-card-link">Explore Style <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 2: HYBRID -->
+          <article class="style-card">
+            <div class="style-card-img-wrap">
+              <picture>
+                <source srcset="assets/images/home/hybrid.webp" type="image/webp">
+                <img src="assets/images/home/hybrid.jpg" 
+                     alt="Hybrid lash set blending classic single lashes with soft volume fans" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1500">
+              </picture>
+            </div>
+            <div class="style-card-content">
+              <span class="style-badge">Balanced Blend</span>
+              <h3 class="style-title">HYBRID</h3>
+              <p class="style-desc">Soft texture with a little more dimension.</p>
+              <a href="services.html" class="style-card-link">Explore Style <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 3: VOLUME -->
+          <article class="style-card">
+            <div class="style-card-img-wrap">
+              <picture>
+                <source srcset="assets/images/home/volume.webp" type="image/webp">
+                <img src="assets/images/home/volume.jpg" 
+                     alt="Full and expressive volume lash set with soft flutter" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1500">
+              </picture>
+            </div>
+            <div class="style-card-content">
+              <span class="style-badge">Rich &amp; Dense</span>
+              <h3 class="style-title">VOLUME</h3>
+              <p class="style-desc">Fuller, richer and beautifully expressive.</p>
+              <a href="services.html" class="style-card-link">Explore Style <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 4: WISPY -->
+          <article class="style-card">
+            <div class="style-card-img-wrap">
+              <picture>
+                <source srcset="assets/images/home/wispy.webp" type="image/webp">
+                <img src="assets/images/home/wispy.jpg" 
+                     alt="Wispy lash styling with textured spikes and delicate flutter" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1500">
+              </picture>
+            </div>
+            <div class="style-card-content">
+              <span class="style-badge">Airy Dimension</span>
+              <h3 class="style-title">WISPY</h3>
+              <p class="style-desc">Light, airy and softly dramatic.</p>
+              <a href="services.html" class="style-card-link">Explore Style <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 5: BROW STYLING -->
+          <article class="style-card">
+            <div class="style-card-img-wrap">
+              <picture>
+                <source srcset="assets/images/home/brow-styling.webp" type="image/webp">
+                <img src="assets/images/home/brow-styling.jpg" 
+                     alt="Sculpted and laminated feathered eyebrow styling" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1500">
+              </picture>
+            </div>
+            <div class="style-card-content">
+              <span class="style-badge">Sculpted Harmony</span>
+              <h3 class="style-title">BROW STYLING</h3>
+              <p class="style-desc">Balanced definition tailored to your features.</p>
+              <a href="services.html" class="style-card-link">Explore Style <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="signature-cta-wrap">
+          <a href="services.html" class="btn-lumiere btn-primary-custom">
+            EXPLORE SERVICES
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — FIND YOUR LOOK (Editorial Split Layout)
+         ========================================================================== -->
+    <section class="find-look-section section-spacing-lg" aria-labelledby="findLookTitle">
+      <div class="container-lumiere">
+        <div class="find-look-grid">
+          
+          <!-- Left Large Editorial Image -->
+          <div class="find-look-media">
+            <div class="find-look-img-frame">
+              <picture>
+                <source srcset="assets/images/home/find-your-look.webp" type="image/webp">
+                <img src="assets/images/home/find-your-look.jpg" 
+                     alt="Studio beauty consultation and personalized lash mapping" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Right Editorial Content -->
+          <div class="find-look-content">
+            <span class="eyebrow">FIND YOUR LOOK</span>
+            <h2 class="section-title" id="findLookTitle">
+              Not sure what suits you?<br>
+              We'll help you find it.
+            </h2>
+            <p class="section-lead">
+              Your lashes and brows should complement your features, lifestyle and personal style. Start with what you love, and we'll help refine the details.
+            </p>
+
+            <!-- 4 Style Indicators -->
+            <div class="indicators-grid">
+              
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-dot"></span>
+                  <span class="indicator-name">SOFT</span>
+                </div>
+                <p class="indicator-text">Effortless everyday definition.</p>
+              </div>
+
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-dot"></span>
+                  <span class="indicator-name">DEFINED</span>
+                </div>
+                <p class="indicator-text">Polished and noticeable.</p>
+              </div>
+
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-dot"></span>
+                  <span class="indicator-name">FLUTTER</span>
+                </div>
+                <p class="indicator-text">Light, airy and delicate.</p>
+              </div>
+
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-dot"></span>
+                  <span class="indicator-name">BOLD</span>
+                </div>
+                <p class="indicator-text">Expressive and glamorous.</p>
+              </div>
+
+            </div>
+
+            <div>
+              <a href="services.html" class="btn-lumiere btn-primary-custom">
+                FIND YOUR STYLE
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — THE LUMIÈRE TOUCH (4 Perfectly Aligned Principles)
+         ========================================================================== -->
+    <section class="lumiere-touch-section section-spacing-lg" aria-labelledby="touchTitle">
+      <div class="container-lumiere">
+        
+        <div class="touch-header">
+          <span class="eyebrow eyebrow-center">THE LUMIÈRE TOUCH</span>
+          <h2 class="section-title" id="touchTitle">
+            Small details.<br>
+            A beautiful difference.
+          </h2>
+          <p class="section-lead" style="margin: 0 auto;">
+            We approach every lash set and brow arch with meticulous precision, tailored care, and an unhurried luxury standard.
+          </p>
+        </div>
+
+        <div class="touch-layout-grid">
+          
+          <!-- 4 Aligned Feature Boxes -->
+          <div class="principles-2x2-grid">
+            
+            <div class="principle-box-card">
+              <span class="principle-num-badge">01</span>
+              <h3 class="principle-heading">PERSONALIZED</h3>
+              <p class="principle-text">Tailored to your features and individual style.</p>
+            </div>
+
+            <div class="principle-box-card">
+              <span class="principle-num-badge">02</span>
+              <h3 class="principle-heading">PRECISE</h3>
+              <p class="principle-text">Every lash isolate and brow stroke is considered.</p>
+            </div>
+
+            <div class="principle-box-card">
+              <span class="principle-num-badge">03</span>
+              <h3 class="principle-heading">COMFORT-FIRST</h3>
+              <p class="principle-text">A serene, calming studio treatment experience.</p>
+            </div>
+
+            <div class="principle-box-card">
+              <span class="principle-num-badge">04</span>
+              <h3 class="principle-heading">AFTERCARE</h3>
+              <p class="principle-text">Thoughtful guidance and bespoke care routines.</p>
+            </div>
+
+          </div>
+
+          <!-- Editorial Craft Image Showcase -->
+          <div class="touch-media-wrap">
+            <div class="touch-img-frame">
+              <picture>
+                <source srcset="assets/images/home/lumiere-touch.webp" type="image/webp">
+                <img src="assets/images/home/lumiere-touch.jpg" 
+                     alt="The Lumière Touch precision eyelash artistry and brow styling detail" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — TRANSFORMATION (Interactive Comparison Component)
+         ========================================================================== -->
+    <section class="transformation-section section-spacing-lg" aria-labelledby="transformationTitle">
+      <div class="container-lumiere">
+        
+        <div class="transformation-header">
+          <span class="eyebrow eyebrow-center">THE TRANSFORMATION</span>
+          <h2 class="section-title" id="transformationTitle">
+            A little definition.<br>
+            A whole new feeling.
+          </h2>
+        </div>
+
+        <!-- Interactive Comparison Component -->
+        <div class="transformation-container">
+          <div class="ba-viewer-wrap" id="baViewer" aria-label="Interactive Before and After comparison slider">
+            
+            <!-- Before Layer (Base) -->
+            <div class="ba-image-layer ba-layer-before">
+              <picture>
+                <source srcset="assets/images/home/transformation-before.webp" type="image/webp">
+                <img src="assets/images/home/transformation-before.jpg" 
+                     alt="Subtle before eyelash and brow styling showing natural bare lashes" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1200">
+              </picture>
+              <span class="ba-badge ba-badge-before">BEFORE</span>
+            </div>
+
+            <!-- After Layer (Overlay Reveal) -->
+            <div class="ba-image-layer ba-layer-after" id="baLayerAfter">
+              <picture>
+                <source srcset="assets/images/home/transformation-after.webp" type="image/webp">
+                <img src="assets/images/home/transformation-after.jpg" 
+                     alt="Refined after eyelash and brow styling showing lifted defined lashes and feathered brow contour" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1200">
+              </picture>
+              <span class="ba-badge ba-badge-after">AFTER</span>
+            </div>
+
+            <!-- Draggable Center Handle -->
+            <div class="ba-handle" id="baHandle" role="slider" aria-label="Comparison slider handle" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+              <i class="bi bi-arrows-expand-vertical" style="transform: rotate(90deg);" aria-hidden="true"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="transformation-footer">
+          <p>Sometimes the smallest beauty details can change how you feel when you look in the mirror.</p>
+          <a href="services.html" class="btn-lumiere btn-primary-custom">
+            VIEW SERVICES
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — A LITTLE TIME FOR YOU (3 Aligned Relaxation Pillars)
+         ========================================================================== -->
+    <section class="appointment-section section-spacing-lg" aria-labelledby="appointmentTitle">
+      <div class="container-lumiere">
+        
+        <div class="appointment-backdrop-card">
+          <div class="appointment-header-block">
+            <span class="eyebrow eyebrow-center">YOUR APPOINTMENT</span>
+            <h2 class="section-title" id="appointmentTitle">
+              A little time for you.
+            </h2>
+            <p class="section-lead" style="margin: 0 auto;">
+              Slow down, settle in and enjoy a beauty appointment designed around your comfort, your style and your confidence.
+            </p>
+          </div>
+
+          <!-- 3 Aligned Pillar Cards -->
+          <div class="appointment-pillars-row">
+            
+            <div class="pillar-aligned-card">
+              <div class="pillar-icon-box">
+                <i class="bi bi-flower1" aria-hidden="true"></i>
+              </div>
+              <h3 class="pillar-title">TAKE A BREATH</h3>
+              <p class="pillar-desc">A calm moment away from the rush.</p>
+            </div>
+
+            <div class="pillar-aligned-card">
+              <div class="pillar-icon-box">
+                <i class="bi bi-heart" aria-hidden="true"></i>
+              </div>
+              <h3 class="pillar-title">FEEL CARED FOR</h3>
+              <p class="pillar-desc">Thoughtful service from consultation to aftercare.</p>
+            </div>
+
+            <div class="pillar-aligned-card">
+              <div class="pillar-icon-box">
+                <i class="bi bi-stars" aria-hidden="true"></i>
+              </div>
+              <h3 class="pillar-title">LEAVE FEELING GOOD</h3>
+              <p class="pillar-desc">Refined beauty that feels like you.</p>
+            </div>
+
+          </div>
+
+          <div class="appointment-bottom-cta">
+            <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+              BOOK YOUR APPOINTMENT
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7 — FINAL FEEL-GOOD CTA (#2B1F24 Deep Plum Background)
+         ========================================================================== -->
+    <section class="closing-cta-section" aria-labelledby="closingTitle">
+      <div class="container-lumiere">
+        <div class="closing-grid">
+          
+          <!-- Content -->
+          <div class="closing-content">
+            <span class="eyebrow closing-eyebrow">READY WHEN YOU ARE</span>
+            <h2 class="closing-title font-serif" id="closingTitle">
+              Leave feeling beautiful.<br>
+              Leave feeling like you.
+            </h2>
+            <p class="closing-text">
+              Your signature look is only an appointment away.
+            </p>
+            <div class="closing-buttons">
+              <a href="contact.html#booking" class="btn-lumiere btn-gold">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-closing-outline">
+                EXPLORE SERVICES
+              </a>
+            </div>
+          </div>
+
+          <!-- Editorial Image -->
+          <div class="closing-media-wrap">
+            <div class="closing-img-frame">
+              <picture>
+                <source srcset="assets/images/home/home-closing.webp" type="image/webp">
+                <img src="assets/images/home/home-closing.jpg" 
+                     alt="Editorial portrait gaze in warm studio light showcasing lashes and brows" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Compact, Balanced, Social Icons, Aligned Columns)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html#policies" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

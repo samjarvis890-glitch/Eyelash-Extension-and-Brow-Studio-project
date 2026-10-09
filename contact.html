@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Studio Booking — LUMIÈRE Lash &amp; Brow Studio</title>
+  <meta name="description" content="Connect with LUMIÈRE Lash &amp; Brow. Request your bespoke lash extension or brow styling appointment, explore beauty directions, and find studio visit details.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-contact">
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Exact same structure & behavior across LUMIÈRE website)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Approved LUMIÈRE Brand Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Only ONE dropdown: HOME -->
+          <li class="dropdown-parent">
+            <a href="index.html" class="nav-link-item" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item active" aria-current="page">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="false">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link active">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — CONTACT INTRO (Unique Editorial Studio Entrance Composition)
+         ========================================================================== -->
+    <section class="contact-intro-section" id="contact-intro" aria-labelledby="contactIntroTitle">
+      <div class="container-lumiere">
+        
+        <div class="contact-intro-grid">
+          
+          <!-- Left: Editorial Entrance Narrative & Details -->
+          <div class="contact-intro-content">
+            
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>COME SAY HELLO</span>
+            </div>
+
+            <h1 class="contact-intro-title" id="contactIntroTitle">
+              LET'S CREATE YOUR<br>LUMIÈRE MOMENT.
+            </h1>
+
+            <p class="contact-intro-lead">
+              Have a question, know the look you want or simply want to talk through your options? We would love to hear from you.
+            </p>
+
+            <div class="contact-intro-actions">
+              <a href="#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-secondary-custom">
+                EXPLORE SERVICES
+              </a>
+            </div>
+
+            <div class="contact-intro-details-panel">
+              <div class="intro-panel-item">
+                <div class="intro-panel-icon">
+                  <i class="bi bi-chat-heart" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="intro-panel-label">Studio Inquiries</div>
+                  <div class="intro-panel-value">Personalized Guidance</div>
+                </div>
+              </div>
+              <div class="intro-panel-item">
+                <div class="intro-panel-icon">
+                  <i class="bi bi-calendar2-check" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="intro-panel-label">Appointment Care</div>
+                  <div class="intro-panel-value">1-on-1 Dedicated Time</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Welcoming Editorial Portrait Frame -->
+          <div class="contact-intro-media">
+            <div class="contact-intro-frame">
+              <picture>
+                <source srcset="assets/images/contact/contact-intro.webp" type="image/webp">
+                <img src="assets/images/contact/contact-intro.jpg" 
+                     alt="Welcoming beauty studio entrance portrait with refined natural lash extensions" 
+                     class="contact-intro-img" 
+                     width="1200" 
+                     height="1600" 
+                     fetchpriority="high" 
+                     loading="eager">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2 — BOOK YOUR APPOINTMENT (booking)
+         ========================================================================== -->
+    <section class="booking-section" id="booking" aria-labelledby="bookingTitle">
+      <div class="container-lumiere">
+        
+        <div class="booking-grid">
+          
+          <!-- Left: Sticky Title & Reassurance Information -->
+          <div class="booking-info-wrap">
+            
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>YOUR APPOINTMENT REQUEST</span>
+            </div>
+
+            <h2 class="booking-title" id="bookingTitle">
+              BOOK YOUR<br>APPOINTMENT
+            </h2>
+
+            <p class="booking-lead">
+              Tell us a little about what you are looking for and we can help you take the next step.
+            </p>
+
+            <ul class="booking-reassurance-list">
+              <li class="reassurance-item">
+                <div class="reassurance-icon">
+                  <i class="bi bi-check-lg" aria-hidden="true"></i>
+                </div>
+                <div class="reassurance-text">
+                  <h4>Tailored Face Consultation</h4>
+                  <p>Every session includes a style consultation to map your eye architecture.</p>
+                </div>
+              </li>
+              <li class="reassurance-item">
+                <div class="reassurance-icon">
+                  <i class="bi bi-check-lg" aria-hidden="true"></i>
+                </div>
+                <div class="reassurance-text">
+                  <h4>Zero Guesswork</h4>
+                  <p>Not sure yet? Choose 'Not Sure Yet' and our artists will guide you.</p>
+                </div>
+              </li>
+              <li class="reassurance-item">
+                <div class="reassurance-icon">
+                  <i class="bi bi-check-lg" aria-hidden="true"></i>
+                </div>
+                <div class="reassurance-text">
+                  <h4>Transparent Communication</h4>
+                  <p>Our team connects with you promptly to confirm availability.</p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- Right: Refined Editorial Booking Form -->
+          <div class="booking-form-panel">
+            
+            <!-- Accessible Feedback Alert Container -->
+            <div id="bookingStatusMessage" class="booking-status-alert" role="alert" aria-live="polite"></div>
+
+            <form id="bookingForm" class="booking-form" novalidate>
+              
+              <div class="booking-form-grid">
+                
+                <!-- Full Name -->
+                <div class="form-group-lumiere">
+                  <label for="bookingName" class="form-label-lumiere">Full Name *</label>
+                  <input type="text" id="bookingName" name="name" class="form-control-lumiere" placeholder="e.g. Eleanor Vance" required autocomplete="name">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group-lumiere">
+                  <label for="bookingEmail" class="form-label-lumiere">Email Address *</label>
+                  <input type="email" id="bookingEmail" name="email" class="form-control-lumiere" placeholder="eleanor@example.com" required autocomplete="email">
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group-lumiere">
+                  <label for="bookingPhone" class="form-label-lumiere">Phone Number *</label>
+                  <input type="tel" id="bookingPhone" name="phone" class="form-control-lumiere" placeholder="e.g. +1 (555) 019-2834" required autocomplete="tel">
+                </div>
+
+                <!-- Service -->
+                <div class="form-group-lumiere">
+                  <label for="bookingService" class="form-label-lumiere">Desired Service *</label>
+                  <select id="bookingService" name="service" class="form-control-lumiere" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Classic Lash Set">Classic Lash Set (1:1 Natural Definition)</option>
+                    <option value="Hybrid Lash Set">Hybrid Lash Set (Dimensional Blend)</option>
+                    <option value="Russian Volume Set">Russian Volume Set (Dense Velvet Drama)</option>
+                    <option value="Wispy &amp; Wet-Look Set">Wispy &amp; Wet-Look Set (Editorial Spikes)</option>
+                    <option value="Lash Lift &amp; Deep Keratin Therapy">Lash Lift &amp; Deep Keratin Therapy</option>
+                    <option value="The Brow Duo (Sculpt &amp; Tint)">The Brow Duo (Sculpt &amp; Tint)</option>
+                    <option value="Feathered Brow Lamination">Feathered Brow Lamination</option>
+                    <option value="Hybrid Staining &amp; Custom Tint">Hybrid Staining &amp; Custom Tint</option>
+                    <option value="Bespoke Lash &amp; Brow Consultation">Bespoke Lash &amp; Brow Consultation</option>
+                    <option value="Not Sure Yet">Not Sure Yet — Recommend for me</option>
+                  </select>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="form-group-lumiere">
+                  <label for="bookingDate" class="form-label-lumiere">Preferred Date *</label>
+                  <input type="date" id="bookingDate" name="date" class="form-control-lumiere" required>
+                </div>
+
+                <!-- Preferred Time -->
+                <div class="form-group-lumiere">
+                  <label for="bookingTime" class="form-label-lumiere">Preferred Time *</label>
+                  <select id="bookingTime" name="time" class="form-control-lumiere" required>
+                    <option value="" disabled selected>Select Time Slot</option>
+                    <option value="Morning (10:00 AM – 1:00 PM)">Morning (10:00 AM – 1:00 PM)</option>
+                    <option value="Afternoon (1:00 PM – 4:00 PM)">Afternoon (1:00 PM – 4:00 PM)</option>
+                    <option value="Late Afternoon (4:00 PM – 7:00 PM)">Late Afternoon (4:00 PM – 7:00 PM)</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group-lumiere form-group-full">
+                  <label for="bookingMessage" class="form-label-lumiere">Describe Your Desired Look or Questions</label>
+                  <textarea id="bookingMessage" name="message" class="form-control-lumiere" placeholder="Tell us about your preferences, natural lashes, or any questions you have..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group-full">
+                  <button type="submit" class="btn-lumiere btn-primary-custom booking-submit-btn">
+                    REQUEST APPOINTMENT
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3 — CHOOSE YOUR BEAUTY DIRECTION (beauty-direction)
+         ========================================================================== -->
+    <section class="beauty-direction-section" id="beauty-direction" aria-labelledby="beautyDirectionTitle">
+      <div class="container-lumiere">
+        
+        <div class="beauty-direction-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>BEAUTY DIRECTION AID</span>
+          </div>
+          <h2 class="section-title" id="beautyDirectionTitle">NOT SURE WHERE TO BEGIN?</h2>
+          <p class="section-lead">
+            You do not need to know exactly what you want before you arrive. We can help you explore the right direction for your features and personal style.
+          </p>
+        </div>
+
+        <div class="beauty-direction-grid">
+          
+          <!-- Direction 1: SOFT -->
+          <article class="direction-card">
+            <div class="direction-card-media">
+              <picture>
+                <source srcset="assets/images/contact/contact-soft.webp" type="image/webp">
+                <img src="assets/images/contact/contact-soft.jpg" 
+                     alt="Soft understated natural lash and brow finish portrait" 
+                     class="direction-card-img" 
+                     width="1000" 
+                     height="1333" 
+                     loading="lazy">
+              </picture>
+            </div>
+            <div class="direction-card-body">
+              <h3 class="direction-title">SOFT</h3>
+              <p class="direction-desc">
+                For a subtle, understated finish that enhances your natural beauty with delicate, effortless grace.
+              </p>
+            </div>
+          </article>
+
+          <!-- Direction 2: DEFINED -->
+          <article class="direction-card">
+            <div class="direction-card-media">
+              <picture>
+                <source srcset="assets/images/contact/contact-defined.webp" type="image/webp">
+                <img src="assets/images/contact/contact-defined.jpg" 
+                     alt="Clean defined polished lash and brow styling portrait" 
+                     class="direction-card-img" 
+                     width="1000" 
+                     height="1333" 
+                     loading="lazy">
+              </picture>
+            </div>
+            <div class="direction-card-body">
+              <h3 class="direction-title">DEFINED</h3>
+              <p class="direction-desc">
+                For clean, polished definition with structured symmetry that flatters your facial features.
+              </p>
+            </div>
+          </article>
+
+          <!-- Direction 3: EXPRESSIVE -->
+          <article class="direction-card">
+            <div class="direction-card-media">
+              <picture>
+                <source srcset="assets/images/contact/contact-expressive.webp" type="image/webp">
+                <img src="assets/images/contact/contact-expressive.jpg" 
+                     alt="Expressive noticeable beauty statement lash and brow portrait" 
+                     class="direction-card-img" 
+                     width="1000" 
+                     height="1333" 
+                     loading="lazy">
+              </picture>
+            </div>
+            <div class="direction-card-body">
+              <h3 class="direction-title">EXPRESSIVE</h3>
+              <p class="direction-desc">
+                For a more noticeable beauty statement with dramatic fullness, textured spikes, and bold presence.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4 — BEFORE YOU VISIT (before-you-visit)
+         ========================================================================== -->
+    <section class="before-visit-section" id="before-you-visit" aria-labelledby="beforeVisitTitle">
+      <div class="container-lumiere">
+        
+        <div class="before-visit-grid">
+          
+          <!-- Left: Studio Preparation Visual -->
+          <div class="before-visit-media">
+            <div class="before-visit-frame">
+              <picture>
+                <source srcset="assets/images/contact/contact-preparation.webp" type="image/webp">
+                <img src="assets/images/contact/contact-preparation.jpg" 
+                     alt="Calm studio preparation details with refined beauty tools and warm cream textiles" 
+                     class="before-visit-img" 
+                     width="1200" 
+                     height="1600" 
+                     loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Right: 4 Numbered Preparation Notes -->
+          <div class="before-visit-notes-stack">
+            
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>PRE-APPOINTMENT GUIDE</span>
+            </div>
+
+            <h2 class="section-title" id="beforeVisitTitle">
+              A LITTLE PREPARATION<br>GOES A LONG WAY.
+            </h2>
+
+            <p class="section-lead" style="margin-bottom: 1.5rem;">
+              A few simple steps can help you arrive feeling comfortable and ready for your appointment.
+            </p>
+
+            <!-- Note 01 -->
+            <article class="prep-note-item">
+              <span class="prep-note-num">01</span>
+              <div class="prep-note-content">
+                <h3 class="prep-note-title">ARRIVE COMFORTABLY</h3>
+                <p class="prep-note-text">
+                  Give yourself enough time to settle in without rushing so you can enjoy a calm, unhurried beauty experience.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 02 -->
+            <article class="prep-note-item">
+              <span class="prep-note-num">02</span>
+              <div class="prep-note-content">
+                <h3 class="prep-note-title">COME WITH YOUR PREFERENCES</h3>
+                <p class="prep-note-text">
+                  If you have a reference image or a look you like, feel free to bring it along to discuss with your artist.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 03 -->
+            <article class="prep-note-item">
+              <span class="prep-note-num">03</span>
+              <div class="prep-note-content">
+                <h3 class="prep-note-title">SHARE YOUR QUESTIONS</h3>
+                <p class="prep-note-text">
+                  If you are unsure about a lash or brow direction, mention it before the service begins so we can tailor the plan.
+                </p>
+              </div>
+            </article>
+
+            <!-- Note 04 -->
+            <article class="prep-note-item">
+              <span class="prep-note-num">04</span>
+              <div class="prep-note-content">
+                <h3 class="prep-note-title">FOLLOW YOUR GUIDANCE</h3>
+                <p class="prep-note-text">
+                  Use the aftercare information provided for your chosen service to ensure lasting, beautiful retention.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5 — VISIT THE STUDIO / VISIBLE REAL MAP (studio-location)
+         ========================================================================== -->
+    <section class="studio-location-section" id="studio-location" aria-labelledby="studioLocationTitle">
+      <div class="container-lumiere">
+        
+        <div class="studio-location-grid">
+          
+          <!-- Left: Studio Details & Visit Information -->
+          <div class="studio-info-card">
+            
+            <span class="studio-badge">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Studio Atmosphere
+            </span>
+
+            <h2 class="studio-heading" id="studioLocationTitle">
+              FIND YOUR WAY<br>TO LUMIÈRE.
+            </h2>
+
+            <p class="studio-desc">
+              Our studio is designed as a tranquil sanctuary for refined lash and brow artistry. To preserve our personalized one-on-one guest care, studio visits and consultations are scheduled by appointment.
+            </p>
+
+            <div class="studio-note-box">
+              <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+              <div class="studio-note-content">
+                <h4>STUDIO LOCATION TO BE CONFIRMED</h4>
+                <p>Exact studio address and private suite directions are provided upon appointment confirmation.</p>
+              </div>
+            </div>
+
+            <div class="studio-note-box" style="border-left-color: var(--color-dusty-rose);">
+              <i class="bi bi-clock-history" aria-hidden="true"></i>
+              <div class="studio-note-content">
+                <h4>Dedicated Quiet Hours</h4>
+                <p>We dedicate our full attention to each client session in a relaxed, serene environment.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Visible Real Interactive Map -->
+          <div class="map-wrapper-lumiere">
+            <iframe class="map-iframe-lumiere" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-74.015%2C40.710%2C-73.990%2C40.725&amp;layer=mapnik&amp;marker=40.718%2C-74.002" 
+                    title="Lumière Lash &amp; Brow studio location map"
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    aria-label="Lumière Lash &amp; Brow studio location map">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6 — QUESTIONS BEFORE YOUR APPOINTMENT (contact-faq)
+         ========================================================================== -->
+    <div id="faq"></div>
+    <section class="contact-faq-section" id="contact-faq" aria-labelledby="contactFaqTitle">
+      <div class="container-lumiere">
+        
+        <div class="contact-faq-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>CLARITY &amp; PEACE OF MIND</span>
+          </div>
+          <h2 class="section-title" id="contactFaqTitle">
+            BEFORE YOU BOOK,<br>YOU MAY BE WONDERING...
+          </h2>
+          <p class="section-lead">
+            Common questions answered to make your booking simple and reassuring.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list" role="region" aria-label="Frequently Asked Questions">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-header" id="faqHeader1" aria-expanded="false" aria-controls="faqContent1">
+              <span>What if I am not sure which service I need?</span>
+              <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div id="faqContent1" class="faq-accordion-content" role="region" aria-labelledby="faqHeader1">
+              <p class="faq-accordion-body">
+                You can describe the result you are looking for in the booking form and select "Not Sure Yet". Every appointment includes a personalized face and eye consultation to determine the ideal styling for your features.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-header" id="faqHeader2" aria-expanded="false" aria-controls="faqContent2">
+              <span>Can I ask about a different look?</span>
+              <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div id="faqContent2" class="faq-accordion-content" role="region" aria-labelledby="faqHeader2">
+              <p class="faq-accordion-body">
+                Yes. Use the message field in the appointment form to describe your preferred aesthetic or bring reference images when you arrive at the studio.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-header" id="faqHeader3" aria-expanded="false" aria-controls="faqContent3">
+              <span>How do I book?</span>
+              <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div id="faqContent3" class="faq-accordion-content" role="region" aria-labelledby="faqHeader3">
+              <p class="faq-accordion-body">
+                Use the appointment form above to submit your request with your preferred date, time window, and service details.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-header" id="faqHeader4" aria-expanded="false" aria-controls="faqContent4">
+              <span>Will the form confirm my appointment?</span>
+              <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div id="faqContent4" class="faq-accordion-content" role="region" aria-labelledby="faqHeader4">
+              <p class="faq-accordion-body">
+                The form submits a personalized request to our studio desk rather than confirming a live automated booking. A member of our team will reach out to confirm availability and finalize your preferred slot.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-header" id="faqHeader5" aria-expanded="false" aria-controls="faqContent5">
+              <span>How can I ask a question before booking?</span>
+              <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div id="faqContent5" class="faq-accordion-content" role="region" aria-labelledby="faqHeader5">
+              <p class="faq-accordion-body">
+                Use the contact/booking form above and include your specific question in the message field. We will gladly get in touch to assist you.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7 — YOUR NEXT MOMENT / CLOSING CTA (contact-closing)
+         ========================================================================== -->
+    <section class="contact-closing-section" id="contact-closing" aria-labelledby="contactClosingTitle">
+      <div class="container-lumiere">
+        
+        <div class="contact-closing-card">
+          
+          <!-- Left: Action Content -->
+          <div class="contact-closing-content">
+            <span class="eyebrow">WHEN YOU'RE READY</span>
+            <h2 class="contact-closing-title" id="contactClosingTitle">
+              A LITTLE TIME FOR YOU<br>STARTS HERE.
+            </h2>
+            <p class="contact-closing-desc">
+              Choose your service, tell us what you have in mind and take the first step toward your next Lumière beauty moment.
+            </p>
+            <div class="contact-closing-actions">
+              <a href="#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="gallery.html" class="btn-lumiere btn-secondary-custom">
+                EXPLORE THE GALLERY
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Horizontal Campaign Image -->
+          <div class="contact-closing-media">
+            <picture>
+              <source srcset="assets/images/contact/contact-closing.webp" type="image/webp">
+              <img src="assets/images/contact/contact-closing.jpg" 
+                   alt="Serene beauty campaign invitation portrait with refined lash and brow artistry" 
+                   class="contact-closing-img" 
+                   width="1600" 
+                   height="900" 
+                   loading="lazy">
+            </picture>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Compact, Balanced, Social Icons, Aligned Columns)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html#contact-faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#contact-faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 54" fill="none" role="img" aria-label="LUMIÈRE Lash &amp; Brow">
+  <!-- Monogram Mark -->
+  <g transform="translate(4, 2)">
+    <circle cx="25" cy="25" r="23.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+    <path d="M12.5 17.5C20.5 11 31 12 37.5 17" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M19.5 13.5V31.5C19.5 34.2 21.5 35.8 24.5 35.8C28.8 35.8 34.5 35 38.2 32.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23 23.5C27.2 20.8 32.5 21.2 36.5 25" stroke="#8E5A6B" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="37.5" cy="17" r="2" fill="#C89A8B"/>
+  </g>
+  
+  <!-- LUMIÈRE Wordmark in Cormorant Garamond -->
+  <text x="64" y="29.5" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="24" font-weight="600" letter-spacing="3.8" fill="currentColor">LUMIÈRE</text>
+  
+  <!-- LASH & BROW Sub-title in DM Sans -->
+  <text x="65.5" y="44.5" font-family="'DM Sans', 'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" letter-spacing="3.2" fill="#8E5A6B">LASH &amp; BROW</text>
+</svg>

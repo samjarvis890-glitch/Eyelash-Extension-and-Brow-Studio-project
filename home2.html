@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ritual — LUMIÈRE Lash &amp; Brow Studio</title>
+  <meta name="description" content="Experience The Lumière Ritual: an intimate, considered eyelash extension and brow design journey tailored to your natural beauty and quiet confidence.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-home2">
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Home 2 Refined Editorial Header Treatment)
+       ========================================================================== -->
+  <header class="site-header header-home2" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Approved LUMIÈRE Brand Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Home Dropdown -->
+          <li class="dropdown-parent">
+            <a href="home2.html" class="nav-link-item active" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link active">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="true">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content open" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink active">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls (Dark mode, RTL, Booking CTA inside drawer) -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — THE BEAUTY RITUAL (Cinematic Editorial Hero)
+         ========================================================================== -->
+    <section class="h2-hero-section" aria-labelledby="h2HeroTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-hero-card">
+          <!-- Background Visual Frame -->
+          <div class="h2-hero-bg-media">
+            <picture>
+              <source srcset="assets/images/home2/home2-hero.webp" type="image/webp">
+              <img src="assets/images/home2/home2-hero.jpg" 
+                   alt="Lumière Beauty Ritual cinematic editorial portrait showcasing fluttery lashes and groomed brow contours" 
+                   class="h2-hero-img" 
+                   width="1920" 
+                   height="1080" 
+                   fetchpriority="high" 
+                   loading="eager">
+            </picture>
+            <div class="h2-hero-scrim"></div>
+          </div>
+
+          <!-- Hero Content Overlay -->
+          <div class="h2-hero-content-wrap">
+            <div class="h2-hero-badge-marker">
+              <span class="h2-marker-num">01 / 07</span>
+              <span class="h2-marker-sep">•</span>
+              <span class="h2-marker-text">LASH • BROW • RITUAL</span>
+            </div>
+
+            <span class="eyebrow h2-hero-eyebrow">THE LUMIÈRE RITUAL</span>
+            <h1 class="h2-hero-heading font-serif" id="h2HeroTitle">
+              A BEAUTIFUL<br>
+              MOMENT,<br>
+              <span>JUST FOR YOU.</span>
+            </h1>
+            <p class="h2-hero-desc">
+              A considered lash and brow experience designed to bring out your natural expression and leave you feeling beautifully yourself.
+            </p>
+
+            <div class="h2-hero-actions">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="#your-visit" class="btn-lumiere btn-h2-outline">
+                DISCOVER THE RITUAL <i class="bi bi-arrow-down" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — YOUR VISIT (4-Stage Horizontal Journey Timeline)
+         ========================================================================== -->
+    <section class="h2-journey-section section-spacing-lg" id="your-visit" aria-labelledby="journeyTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-section-header text-center">
+          <span class="eyebrow eyebrow-center">YOUR VISIT</span>
+          <h2 class="section-title" id="journeyTitle">
+            From first hello<br>
+            to final mirror moment.
+          </h2>
+        </div>
+
+        <div class="h2-journey-layout">
+          
+          <!-- 4 Stages Timeline -->
+          <div class="h2-timeline-track">
+            
+            <div class="h2-timeline-node">
+              <div class="h2-node-marker">
+                <span class="h2-node-number font-serif">01</span>
+                <span class="h2-node-dot"></span>
+              </div>
+              <div class="h2-node-body">
+                <h3 class="h2-node-title">CONSULT</h3>
+                <p class="h2-node-desc">We begin with your style, features and the look you have in mind.</p>
+              </div>
+            </div>
+
+            <div class="h2-timeline-node">
+              <div class="h2-node-marker">
+                <span class="h2-node-number font-serif">02</span>
+                <span class="h2-node-dot"></span>
+              </div>
+              <div class="h2-node-body">
+                <h3 class="h2-node-title">PREPARE</h3>
+                <p class="h2-node-desc">Everything is prepared with care for a calm, comfortable appointment.</p>
+              </div>
+            </div>
+
+            <div class="h2-timeline-node">
+              <div class="h2-node-marker">
+                <span class="h2-node-number font-serif">03</span>
+                <span class="h2-node-dot"></span>
+              </div>
+              <div class="h2-node-body">
+                <h3 class="h2-node-title">CREATE</h3>
+                <p class="h2-node-desc">Your lash and brow details are refined with precision.</p>
+              </div>
+            </div>
+
+            <div class="h2-timeline-node">
+              <div class="h2-node-marker">
+                <span class="h2-node-number font-serif">04</span>
+                <span class="h2-node-dot"></span>
+              </div>
+              <div class="h2-node-body">
+                <h3 class="h2-node-title">REVEAL</h3>
+                <p class="h2-node-desc">Take a final look, receive aftercare guidance and leave feeling confident.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Supporting Studio Atmosphere Accent -->
+          <div class="h2-journey-media-accent">
+            <div class="h2-accent-frame">
+              <picture>
+                <source srcset="assets/images/home2/home2-ritual.webp" type="image/webp">
+                <img src="assets/images/home2/home2-ritual.jpg" 
+                     alt="Lumière tranquil appointment setting with soft ivory linens and studio serenity" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+              <div class="h2-accent-caption">
+                <span class="h2-caption-tag">STUDIO SANCTUARY</span>
+                <p class="h2-caption-text">Every appointment is crafted with unhurried care.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — THE ART OF DETAIL (Editorial Beauty Craft)
+         ========================================================================== -->
+    <section class="h2-art-section section-spacing-lg" aria-labelledby="artDetailTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-art-grid">
+          
+          <!-- Editorial Macro Visual -->
+          <div class="h2-art-media-wrap">
+            <div class="h2-art-frame">
+              <picture>
+                <source srcset="assets/images/home2/home2-detail.webp" type="image/webp">
+                <img src="assets/images/home2/home2-detail.jpg" 
+                     alt="Close-up delicate lash isolate placement and meticulous application craft" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Editorial Craft Annotations -->
+          <div class="h2-art-content">
+            <span class="eyebrow">THE ART OF DETAIL</span>
+            <h2 class="section-title" id="artDetailTitle">
+              Beauty lives<br>
+              in the little things.
+            </h2>
+            <p class="section-lead">
+              The curl. The placement. The balance. The shape. Every detail works together to create a finish that feels naturally yours.
+            </p>
+
+            <!-- 3 Refined Detail Labels -->
+            <div class="h2-art-annotations">
+              
+              <div class="h2-annotation-item">
+                <div class="h2-annotation-line-marker">
+                  <span class="h2-ann-num font-serif">01</span>
+                  <div class="h2-ann-dash"></div>
+                </div>
+                <div>
+                  <h3 class="h2-ann-title">CURVE</h3>
+                  <p class="h2-ann-desc">The right curl creates effortless definition.</p>
+                </div>
+              </div>
+
+              <div class="h2-annotation-item">
+                <div class="h2-annotation-line-marker">
+                  <span class="h2-ann-num font-serif">02</span>
+                  <div class="h2-ann-dash"></div>
+                </div>
+                <div>
+                  <h3 class="h2-ann-title">PLACEMENT</h3>
+                  <p class="h2-ann-desc">Precise placement keeps the finish balanced.</p>
+                </div>
+              </div>
+
+              <div class="h2-annotation-item">
+                <div class="h2-annotation-line-marker">
+                  <span class="h2-ann-num font-serif">03</span>
+                  <div class="h2-ann-dash"></div>
+                </div>
+                <div>
+                  <h3 class="h2-ann-title">BALANCE</h3>
+                  <p class="h2-ann-desc">Lashes and brows work together as one look.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — CHOOSE YOUR MOOD (4-Column Lash Visual Strip)
+         ========================================================================== -->
+    <section class="h2-mood-section section-spacing-lg" aria-labelledby="moodTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-section-header text-center">
+          <span class="eyebrow eyebrow-center">CHOOSE YOUR MOOD</span>
+          <h2 class="section-title" id="moodTitle">
+            Today, your lashes<br>
+            can say anything.
+          </h2>
+        </div>
+
+        <!-- 4 Equal Column Mood Strip -->
+        <div class="h2-mood-grid">
+          
+          <!-- Mood 1: SOFT -->
+          <article class="h2-mood-card">
+            <div class="h2-mood-media">
+              <picture>
+                <source srcset="assets/images/home2/home2-soft.webp" type="image/webp">
+                <img src="assets/images/home2/home2-soft.jpg" 
+                     alt="Soft natural eyelash extension styling" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1600">
+              </picture>
+            </div>
+            <div class="h2-mood-body">
+              <span class="h2-mood-tag">LOOK 01</span>
+              <h3 class="h2-mood-name">SOFT</h3>
+              <p class="h2-mood-text">Quietly beautiful.</p>
+            </div>
+          </article>
+
+          <!-- Mood 2: POLISHED -->
+          <article class="h2-mood-card">
+            <div class="h2-mood-media">
+              <picture>
+                <source srcset="assets/images/home2/home2-polished.webp" type="image/webp">
+                <img src="assets/images/home2/home2-polished.jpg" 
+                     alt="Polished clean eyelash extension styling" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1600">
+              </picture>
+            </div>
+            <div class="h2-mood-body">
+              <span class="h2-mood-tag">LOOK 02</span>
+              <h3 class="h2-mood-name">POLISHED</h3>
+              <p class="h2-mood-text">Clean and refined.</p>
+            </div>
+          </article>
+
+          <!-- Mood 3: FLUTTER -->
+          <article class="h2-mood-card">
+            <div class="h2-mood-media">
+              <picture>
+                <source srcset="assets/images/home2/home2-flutter.webp" type="image/webp">
+                <img src="assets/images/home2/home2-flutter.jpg" 
+                     alt="Flutter airy lightweight separated lashes" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1600">
+              </picture>
+            </div>
+            <div class="h2-mood-body">
+              <span class="h2-mood-tag">LOOK 03</span>
+              <h3 class="h2-mood-name">FLUTTER</h3>
+              <p class="h2-mood-text">Light and playful.</p>
+            </div>
+          </article>
+
+          <!-- Mood 4: STATEMENT -->
+          <article class="h2-mood-card">
+            <div class="h2-mood-media">
+              <picture>
+                <source srcset="assets/images/home2/home2-statement.webp" type="image/webp">
+                <img src="assets/images/home2/home2-statement.jpg" 
+                     alt="Statement expressive full volume eyelash styling" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="1600">
+              </picture>
+            </div>
+            <div class="h2-mood-body">
+              <span class="h2-mood-tag">LOOK 04</span>
+              <h3 class="h2-mood-name">STATEMENT</h3>
+              <p class="h2-mood-text">Bold and expressive.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — THE BROW FRAME (Brow Artistry)
+         ========================================================================== -->
+    <section class="h2-brow-section section-spacing-lg" aria-labelledby="browFrameTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-brow-grid">
+          
+          <!-- Brow Editorial Image -->
+          <div class="h2-brow-media-wrap">
+            <div class="h2-brow-frame">
+              <picture>
+                <source srcset="assets/images/home2/home2-brow.webp" type="image/webp">
+                <img src="assets/images/home2/home2-brow.jpg" 
+                     alt="Sculpted laminated brow architecture framing facial symmetry" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Vertical Editorial Content -->
+          <div class="h2-brow-content">
+            <span class="eyebrow">THE BROW FRAME</span>
+            <h2 class="section-title" id="browFrameTitle">
+              The shape that<br>
+              changes the whole expression.
+            </h2>
+            <p class="section-lead">
+              Beautiful brows begin with balance — refined to complement your natural features without looking overdone.
+            </p>
+
+            <!-- 3 Principles -->
+            <div class="h2-brow-principles">
+              
+              <div class="h2-brow-principle-card">
+                <span class="h2-bp-badge font-serif">01</span>
+                <div class="h2-bp-content">
+                  <h3 class="h2-bp-title">SHAPE</h3>
+                  <p class="h2-bp-text">Balanced to complement your natural features.</p>
+                </div>
+              </div>
+
+              <div class="h2-brow-principle-card">
+                <span class="h2-bp-badge font-serif">02</span>
+                <div class="h2-bp-content">
+                  <h3 class="h2-bp-title">DEFINITION</h3>
+                  <p class="h2-bp-text">Clean detail without looking overdone.</p>
+                </div>
+              </div>
+
+              <div class="h2-brow-principle-card">
+                <span class="h2-bp-badge font-serif">03</span>
+                <div class="h2-bp-content">
+                  <h3 class="h2-bp-title">HARMONY</h3>
+                  <p class="h2-bp-text">Designed to work beautifully with your eyes and lashes.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="h2-brow-cta">
+              <a href="services.html" class="btn-lumiere btn-primary-custom">
+                EXPLORE BROW SERVICES
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — THE MIRROR MOMENT (Emotional Beauty Story)
+         ========================================================================== -->
+    <section class="h2-mirror-section section-spacing-lg" aria-labelledby="mirrorMomentTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-mirror-card">
+          <div class="h2-mirror-grid">
+            
+            <!-- Emotional Narrative -->
+            <div class="h2-mirror-content">
+              <span class="eyebrow">THE MIRROR MOMENT</span>
+              <h2 class="section-title" id="mirrorMomentTitle">
+                That little moment<br>
+                when everything feels right.
+              </h2>
+              <p class="section-lead">
+                A refined finish should not feel like someone else. It should simply feel more like you.
+              </p>
+
+              <div class="h2-mirror-quote-box">
+                <span class="h2-quote-line"></span>
+                <p class="h2-quote-statement font-serif">
+                  FEEL BEAUTIFUL.<br>
+                  FEEL LIKE YOURSELF.
+                </p>
+              </div>
+
+              <div>
+                <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+                  BOOK YOUR APPOINTMENT
+                </a>
+              </div>
+            </div>
+
+            <!-- Large Cinematic Portrait -->
+            <div class="h2-mirror-media">
+              <div class="h2-mirror-img-frame">
+                <picture>
+                  <source srcset="assets/images/home2/home2-mirror.webp" type="image/webp">
+                  <img src="assets/images/home2/home2-mirror.jpg" 
+                       alt="Lumière client genuine confident reflection moment" 
+                       loading="lazy" 
+                       width="1400" 
+                       height="1600">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7 — YOUR NEXT RITUAL (Final Split Editorial Closing)
+         ========================================================================== -->
+    <section class="h2-closing-section section-spacing-lg" aria-labelledby="nextRitualTitle">
+      <div class="container-lumiere">
+        
+        <div class="h2-closing-grid">
+          
+          <!-- Editorial Text & CTA -->
+          <div class="h2-closing-content">
+            <span class="eyebrow closing-eyebrow">YOUR NEXT RITUAL</span>
+            <h2 class="closing-title font-serif" id="nextRitualTitle">
+              Make a little room<br>
+              for feeling good.
+            </h2>
+            <p class="closing-text">
+              Choose your look, take a moment for yourself and let the details do the rest.
+            </p>
+            <div class="closing-buttons">
+              <a href="contact.html#booking" class="btn-lumiere btn-gold">
+                BOOK AN APPOINTMENT
+              </a>
+              <a href="services.html" class="btn-lumiere btn-closing-outline">
+                EXPLORE SERVICES
+              </a>
+            </div>
+          </div>
+
+          <!-- Closing Media Frame -->
+          <div class="h2-closing-media">
+            <div class="h2-closing-img-frame">
+              <picture>
+                <source srcset="assets/images/home2/home2-closing.webp" type="image/webp">
+                <img src="assets/images/home2/home2-closing.jpg" 
+                     alt="Lumière final campaign portrait in warm rose and deep plum atmosphere" 
+                     loading="lazy" 
+                     width="1400" 
+                     height="1600">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Exact Same 4-Column Balanced Footer as Index)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html#policies" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercare" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Beauty Menu — LUMIÈRE Lash &amp; Brow Studio</title>
+  <meta name="description" content="Explore our bespoke lash extensions, lash lifts, and brow styling services. Handcrafted artistry tailored to your unique beauty at LUMIÈRE.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & DM Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-services">
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Services Page Refined Editorial Treatment)
+       ========================================================================== -->
+  <header class="site-header header-services" id="siteHeader">
+    <div class="container-lumiere">
+      <nav class="navbar-lumiere" aria-label="Main Navigation">
+        
+        <!-- Approved LUMIÈRE Brand Monogram Logo -->
+        <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+          <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+            <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+          </svg>
+          <div class="brand-text-wrap">
+            <span class="brand-name">LUMIÈRE</span>
+            <span class="brand-sub">Lash &amp; Brow</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (Visible ONLY on Desktop >= 1281px) -->
+        <ul class="desktop-nav-menu">
+          <!-- Home Dropdown -->
+          <li class="dropdown-parent">
+            <a href="index.html" class="nav-link-item" aria-haspopup="true" aria-expanded="false">
+              HOME <i class="bi bi-chevron-down dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu-custom" aria-label="Home Pages Submenu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link-item">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link-item active">SERVICES</a></li>
+          <li><a href="gallery.html" class="nav-link-item">GALLERY</a></li>
+          <li><a href="pricing.html" class="nav-link-item">PRICING</a></li>
+          <li><a href="contact.html" class="nav-link-item">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions (Visible ONLY on Desktop >= 1281px) -->
+        <div class="navbar-actions">
+          <button type="button" class="btn-icon" id="themeToggleDesktop" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn-icon" id="rtlToggleDesktop" aria-label="Toggle RTL/LTR" title="Toggle Text Direction">
+            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          </button>
+          <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+
+        <!-- Hamburger Trigger (Visible ONLY on Mobile & Tablet <= 1280px) -->
+        <button type="button" class="btn-hamburger" id="btnHamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE & TABLET SLIDE-OUT DRAWER MENU (<= 1280px)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="drawer-header">
+      <a href="index.html" class="navbar-brand-lumiere">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+          <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">LUMIÈRE</span>
+          <span class="brand-sub">Lash &amp; Brow</span>
+        </div>
+      </a>
+      <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Close Navigation Menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-menu">
+        <!-- Home Accordion -->
+        <li>
+          <button type="button" class="drawer-accordion-btn" id="drawerHomeAccordionBtn" aria-expanded="false">
+            <span>HOME</span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer-accordion-content" id="drawerHomeAccordionContent">
+            <li><a href="index.html" class="drawer-sublink">Home 1</a></li>
+            <li><a href="home2.html" class="drawer-sublink">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="drawer-link">ABOUT</a></li>
+        <li><a href="services.html" class="drawer-link active">SERVICES</a></li>
+        <li><a href="gallery.html" class="drawer-link">GALLERY</a></li>
+        <li><a href="pricing.html" class="drawer-link">PRICING</a></li>
+        <li><a href="contact.html" class="drawer-link">CONTACT</a></li>
+      </ul>
+
+      <div class="drawer-divider"></div>
+
+      <!-- Drawer Controls (Dark mode, RTL, Booking CTA inside drawer) -->
+      <div class="drawer-controls">
+        <button type="button" class="drawer-toggle-btn" id="themeToggleMobile">
+          <span class="toggle-label">Dark Mode</span>
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="drawer-toggle-btn" id="rtlToggleMobile">
+          <span class="toggle-label">RTL View</span>
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#booking" class="btn-lumiere btn-primary-custom drawer-booking-btn">
+          BOOK AN APPOINTMENT
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — THE BEAUTY MENU (Asymmetrical Editorial Header & Overview)
+         ========================================================================== -->
+    <section class="services-intro-section" aria-labelledby="servicesIntroTitle">
+      <div class="container-lumiere">
+        
+        <div class="services-intro-grid">
+          
+          <!-- Left Text Content -->
+          <div class="services-intro-content">
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>THE LUMIÈRE BEAUTY MENU</span>
+            </div>
+            
+            <h1 class="services-intro-title" id="servicesIntroTitle">
+              Your Look.<br>
+              <em>Your Details.</em><br>
+              Your Way.
+            </h1>
+            
+            <p class="services-intro-lead">
+              Every gaze tells a different story. At LUMIÈRE, our service menu is meticulously structured around individual eye architecture, brow flow, and lifestyle pace—offering custom lash sets, lifting therapies, and refined brow sculpting that feel weightless and effortlessly you.
+            </p>
+            
+            <!-- Quick Category Pill Jump Navigation -->
+            <div class="services-quick-pills" role="navigation" aria-label="Services Navigation Shortlist">
+              <a href="#lashExtensions" class="service-pill">
+                <i class="bi bi-stars" aria-hidden="true"></i> Lash Extensions
+              </a>
+              <a href="#lashLift" class="service-pill">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i> Lash Lift &amp; Tint
+              </a>
+              <a href="#browServices" class="service-pill">
+                <i class="bi bi-brush" aria-hidden="true"></i> The Brow Edit
+              </a>
+              <a href="#consultationGuide" class="service-pill">
+                <i class="bi bi-patch-question" aria-hidden="true"></i> Style Matcher
+              </a>
+              <a href="#aftercareGuide" class="service-pill">
+                <i class="bi bi-shield-check" aria-hidden="true"></i> Aftercare Guide
+              </a>
+              <a href="#servicesFaq" class="service-pill">
+                <i class="bi bi-question-circle" aria-hidden="true"></i> Service FAQs
+              </a>
+            </div>
+
+            <div class="services-intro-badges">
+              <div class="intro-badge-item">
+                <i class="bi bi-check2-circle" aria-hidden="true"></i>
+                <span>100% Damage-Free Isolations</span>
+              </div>
+              <div class="intro-badge-item">
+                <i class="bi bi-gem" aria-hidden="true"></i>
+                <span>Cruelty-Free Korean Cashmere Silk</span>
+              </div>
+              <div class="intro-badge-item">
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
+                <span>6–8 Week Lasting Retention</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Editorial Visual Frame -->
+          <div class="services-intro-media">
+            <div class="services-intro-frame">
+              <picture>
+                <source srcset="assets/images/services/services-intro.webp" type="image/webp">
+                <img src="assets/images/services/services-intro.jpg" 
+                     alt="Lumière lash mapping tray, precision isolation tweezers, and silk extension trays" 
+                     class="services-intro-img" 
+                     width="1920" 
+                     height="1080" 
+                     fetchpriority="high" 
+                     loading="eager">
+              </picture>
+              <div class="services-intro-floating-badge">
+                <span class="badge-label">CURATED MENU</span>
+                <span class="badge-val">Bespoke Precision</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2 — LASH EXTENSIONS (Signature Menu Breakdown)
+         ========================================================================== -->
+    <section class="services-lashes-section" id="lashExtensions" aria-labelledby="lashExtensionsTitle">
+      <div class="container-lumiere">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>SIGNATURE APPLICATION</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+          </div>
+          <h2 class="section-heading-lumiere" id="lashExtensionsTitle">
+            Precision Lash Extensions Tailored to Your Eyes
+          </h2>
+          <p class="section-subtext-lumiere">
+            Handcrafted fans and 1:1 single-lash isolations calibrated to preserve natural lash integrity while delivering sublime fullness, curl retention, and lightweight all-day comfort.
+          </p>
+        </div>
+
+        <!-- Interactive Style Filter Pills -->
+        <div class="service-style-filter-bar" role="tablist" aria-label="Filter lash extension styles">
+          <button type="button" class="btn-filter-pill active" data-filter="all">All Lash Styles</button>
+          <button type="button" class="btn-filter-pill" data-filter="classic">Classic (1:1)</button>
+          <button type="button" class="btn-filter-pill" data-filter="hybrid">Hybrid (Textured)</button>
+          <button type="button" class="btn-filter-pill" data-filter="volume">Russian Volume</button>
+          <button type="button" class="btn-filter-pill" data-filter="wispy">Wispy &amp; Wet-Look</button>
+        </div>
+
+        <div class="services-lashes-grid">
+          
+          <!-- Lash Service Cards (4 Styles with Dedicated Visuals) -->
+          <div class="lashes-cards-wrapper">
+            
+            <!-- Card 1: Classic -->
+            <article class="service-detail-card" data-style="classic">
+              <div class="service-card-media">
+                <picture>
+                  <source srcset="assets/images/services/service-classic.webp" type="image/webp">
+                  <img src="assets/images/services/service-classic.jpg" 
+                       alt="Classic 1:1 single lash extensions application" 
+                       class="service-card-img" 
+                       width="600" 
+                       height="400" 
+                       loading="lazy">
+                </picture>
+                <span class="service-card-badge">1:1 Single Lash</span>
+              </div>
+              <div class="service-card-header">
+                <div class="service-card-tag">NATURAL ENHANCEMENT</div>
+                <h3 class="service-card-title">Classic Lash Set</h3>
+                <div class="service-card-meta">
+                  <span class="meta-item"><i class="bi bi-clock" aria-hidden="true"></i> 90–105 Mins</span>
+                  <span class="meta-item"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Infill: 2–3 Wks</span>
+                </div>
+              </div>
+              <p class="service-card-desc">
+                One delicate cashmere silk extension applied individually to one healthy natural lash. Accentuates length and curl with clean mascara-like definition.
+              </p>
+              <ul class="service-card-highlights">
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Best for natural lash lovers &amp; everyday work elegance</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Customized curls (C, CC, D) &amp; lengths (8mm–13mm)</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Featherlight single lash isolation</li>
+              </ul>
+              <div class="service-card-footer">
+                <a href="contact.html?service=Classic+Lash+Set#booking" class="btn-lumiere btn-outline-custom">Book Classic Set</a>
+              </div>
+            </article>
+
+            <!-- Card 2: Hybrid -->
+            <article class="service-detail-card featured-service-card" data-style="hybrid">
+              <div class="service-featured-pill">STUDIO FAVORITE</div>
+              <div class="service-card-media">
+                <picture>
+                  <source srcset="assets/images/services/service-hybrid.webp" type="image/webp">
+                  <img src="assets/images/services/service-hybrid.jpg" 
+                       alt="Hybrid textured lash extensions combining classic and volume fans" 
+                       class="service-card-img" 
+                       width="600" 
+                       height="400" 
+                       loading="lazy">
+                </picture>
+                <span class="service-card-badge">50/50 Classic &amp; Volume</span>
+              </div>
+              <div class="service-card-header">
+                <div class="service-card-tag">TEXTURED DIMENSION</div>
+                <h3 class="service-card-title">Hybrid Lash Set</h3>
+                <div class="service-card-meta">
+                  <span class="meta-item"><i class="bi bi-clock" aria-hidden="true"></i> 105–120 Mins</span>
+                  <span class="meta-item"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Infill: 2–3 Wks</span>
+                </div>
+              </div>
+              <p class="service-card-desc">
+                A bespoke marriage of 50% single classic extensions and 50% handmade 2D–3D lightweight fans. Fills sparse gaps with dimensional, staggered flutter.
+              </p>
+              <ul class="service-card-highlights">
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Ideal for textured fullness without uniform heaviness</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Perfect balance for varied lash density</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Soft multi-dimensional eye framing</li>
+              </ul>
+              <div class="service-card-footer">
+                <a href="contact.html?service=Hybrid+Lash+Set#booking" class="btn-lumiere btn-primary-custom">Book Hybrid Set</a>
+              </div>
+            </article>
+
+            <!-- Card 3: Volume -->
+            <article class="service-detail-card" data-style="volume">
+              <div class="service-card-media">
+                <picture>
+                  <source srcset="assets/images/services/service-volume.webp" type="image/webp">
+                  <img src="assets/images/services/service-volume.jpg" 
+                       alt="Russian volume lash extensions with velvety dark lash line" 
+                       class="service-card-img" 
+                       width="600" 
+                       height="400" 
+                       loading="lazy">
+                </picture>
+                <span class="service-card-badge">3D–6D Micro Fans</span>
+              </div>
+              <div class="service-card-header">
+                <div class="service-card-tag">DENSE VELVET FINISH</div>
+                <h3 class="service-card-title">Russian Volume Set</h3>
+                <div class="service-card-meta">
+                  <span class="meta-item"><i class="bi bi-clock" aria-hidden="true"></i> 120–135 Mins</span>
+                  <span class="meta-item"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Infill: 3 Wks</span>
+                </div>
+              </div>
+              <p class="service-card-desc">
+                Ultra-fine 0.05mm–0.07mm micro-lashes handcrafted into seamless 3D–6D bouquets. Creates a dark, fluffy, velvety lashline with rich visual depth.
+              </p>
+              <ul class="service-card-highlights">
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Perfect for fine or sparse natural lashes</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Dense, seamless darkness along the eyelid line</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Zero-strain ultra-lightweight micro fibers</li>
+              </ul>
+              <div class="service-card-footer">
+                <a href="contact.html?service=Russian+Volume+Set#booking" class="btn-lumiere btn-outline-custom">Book Volume Set</a>
+              </div>
+            </article>
+
+            <!-- Card 4: Wispy / Wet-Look -->
+            <article class="service-detail-card" data-style="wispy">
+              <div class="service-card-media">
+                <picture>
+                  <source srcset="assets/images/services/service-wispy.webp" type="image/webp">
+                  <img src="assets/images/services/service-wispy.jpg" 
+                       alt="Wispy wet-look lash extensions with staggered peak spikes" 
+                       class="service-card-img" 
+                       width="600" 
+                       height="400" 
+                       loading="lazy">
+                </picture>
+                <span class="service-card-badge">Staggered Spikes</span>
+              </div>
+              <div class="service-card-header">
+                <div class="service-card-tag">EDITORIAL STATEMENT</div>
+                <h3 class="service-card-title">Wispy &amp; Wet-Look Set</h3>
+                <div class="service-card-meta">
+                  <span class="meta-item"><i class="bi bi-clock" aria-hidden="true"></i> 120–135 Mins</span>
+                  <span class="meta-item"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Infill: 2–3 Wks</span>
+                </div>
+              </div>
+              <p class="service-card-desc">
+                Artfully mapped spikes interspersed across softer, shorter fans to emulate the Kim K strip lash look or dewy poolside wet lashes with fierce personality.
+              </p>
+              <ul class="service-card-highlights">
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Trendsetting high-fashion spike architecture</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Dynamic staggered texture with open-eyed lift</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i> Customizable spike spacing &amp; density</li>
+              </ul>
+              <div class="service-card-footer">
+                <a href="contact.html?service=Wispy+%26+Wet-Look+Set#booking" class="btn-lumiere btn-outline-custom">Book Wispy Set</a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Accompanying Visual Showcase Frame -->
+          <div class="lashes-visual-showcase">
+            <div class="showcase-frame">
+              <picture>
+                <source srcset="assets/images/services/services-lashes.webp" type="image/webp">
+                <img src="assets/images/services/services-lashes.jpg" 
+                     alt="Close macro photo of bespoke luxury lash styling and symmetry mapping" 
+                     class="showcase-img" 
+                     width="1600" 
+                     height="1200" 
+                     loading="lazy">
+              </picture>
+              <div class="showcase-annotation-box">
+                <h4 class="annotation-title">The Lumière Mapping Standard</h4>
+                <p class="annotation-desc">
+                  Every full set includes eye-shape geometry analysis, eyelid curvature assessment, and lash health diagnosis before isolation.
+                </p>
+                <div class="annotation-stats">
+                  <div class="stat-pill"><strong>0.05–0.15mm</strong> Thickness</div>
+                  <div class="stat-pill"><strong>8–15mm</strong> Length Range</div>
+                  <div class="stat-pill"><strong>J, B, C, CC, D, L</strong> Curl Types</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3 — LASH LIFT & KERATIN INFUSION (Natural Elevation)
+         ========================================================================== -->
+    <section class="services-lift-section" id="lashLift" aria-labelledby="lashLiftTitle">
+      <div class="container-lumiere">
+        
+        <div class="services-lift-grid">
+          
+          <!-- Left Visual Frame -->
+          <div class="lift-visual-col">
+            <div class="lift-image-frame">
+              <picture>
+                <source srcset="assets/images/services/services-lift.webp" type="image/webp">
+                <img src="assets/images/services/services-lift.jpg" 
+                     alt="Natural upward curved lashes after Keratin Lash Lift and Obsidian tint" 
+                     class="lift-image" 
+                     width="1600" 
+                     height="1100" 
+                     loading="lazy">
+              </picture>
+              <div class="lift-tag-badge">
+                <i class="bi bi-droplet-half" aria-hidden="true"></i>
+                <span>KERATIN NOURISHED · NO EXTENSIONS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content Breakdown -->
+          <div class="lift-content-col">
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>LOW-MAINTENANCE RADIANCE</span>
+            </div>
+            
+            <h2 class="section-heading-lumiere" id="lashLiftTitle">
+              Lash Lift &amp; Deep Keratin Therapy
+            </h2>
+            
+            <p class="lift-lead">
+              Awaken your natural lashes from root to tip. Our gentle chemical curling process lifts and fans your natural lashes upward against custom silicone shields, followed by rich keratin conditioning and deep obsidian tinting.
+            </p>
+
+            <!-- 3 Lift Pillars -->
+            <div class="lift-pillars-list">
+              
+              <div class="lift-pillar-item">
+                <div class="pillar-icon-box">
+                  <i class="bi bi-arrow-up-circle" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-text">
+                  <h4 class="pillar-title">1. Root-to-Tip Upward Curl</h4>
+                  <p class="pillar-desc">
+                    Re-aligns the disulfide bonds of your natural lashes around anatomically sized silicone shields for maximum vertical opening.
+                  </p>
+                </div>
+              </div>
+
+              <div class="lift-pillar-item">
+                <div class="pillar-icon-box">
+                  <i class="bi bi-circle-fill" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-text">
+                  <h4 class="pillar-title">2. Deep Obsidian Lash Tint</h4>
+                  <p class="pillar-desc">
+                    Infuses deep black and cool blue undertones into fair lash tips, giving the visual fullness and depth of two coats of mascara.
+                  </p>
+                </div>
+              </div>
+
+              <div class="lift-pillar-item">
+                <div class="pillar-icon-box">
+                  <i class="bi bi-shield-plus" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-text">
+                  <h4 class="pillar-title">3. Keratin &amp; Peptide Infusion</h4>
+                  <p class="pillar-desc">
+                    Restores hydrolyzed proteins, argan oil, and panthenol to seal cuticles and enhance long-term natural lash resilience.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="lift-actions-bar">
+              <a href="contact.html?service=Lash+Lift+%26+Deep+Keratin+Therapy#booking" class="btn-lumiere btn-primary-custom">
+                Book Lash Lift &amp; Tint
+              </a>
+              <div class="lift-duration-info">
+                <i class="bi bi-hourglass-split" aria-hidden="true"></i>
+                <span>60 Mins · Lasts 6–8 Weeks</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4 — THE BROW EDIT (Architecture, Sculpting & Tint)
+         ========================================================================== -->
+    <section class="services-brow-section" id="browServices" aria-labelledby="browServicesTitle">
+      <div class="container-lumiere">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>FRAMEWORK ARTISTRY</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+          </div>
+          <h2 class="section-heading-lumiere" id="browServicesTitle">
+            The Brow Edit: Sculpt, Define &amp; Laminate
+          </h2>
+          <p class="section-subtext-lumiere">
+            Brows frame the face. We sculpt, shape, and balance your natural arch architecture to harmonize with your bone structure, ocular spacing, and personal styling preferences.
+          </p>
+        </div>
+
+        <div class="services-brow-grid">
+          
+          <!-- Brow Services Trio -->
+          <div class="brow-offerings-col">
+            
+            <!-- Brow Item 1 -->
+            <div class="brow-offering-card">
+              <div class="brow-card-top">
+                <div class="brow-num">01</div>
+                <div>
+                  <h3 class="brow-offering-title">Bespoke Brow Architecture &amp; Shaping</h3>
+                  <span class="brow-offering-time">40 Mins · Precision Sculpting</span>
+                </div>
+              </div>
+              <p class="brow-offering-desc">
+                Golden-ratio caliper mapping, threading, and gentle hot wax shaping followed by fine micro-tweezing to create crisp, defined lines and lifted tails.
+              </p>
+              <div class="brow-card-features">
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Bone contour alignment</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Sensitive skin waxing</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Calming post-wax lotion</span>
+              </div>
+            </div>
+
+            <!-- Brow Item 2 -->
+            <div class="brow-offering-card featured-brow-card">
+              <div class="brow-card-top">
+                <div class="brow-num">02</div>
+                <div>
+                  <h3 class="brow-offering-title">Feathered Brow Lamination</h3>
+                  <span class="brow-offering-time">50 Mins · Lasts 6–8 Wks</span>
+                </div>
+              </div>
+              <p class="brow-offering-desc">
+                Restructures curly or downward-pointing brow hairs into a uniform, lifted brushed-up direction. Creates immediate fullness, fluffiness, and symmetry.
+              </p>
+              <div class="brow-card-features">
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Tames unruly cowlicks</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Covers sparse patches</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Includes keratin treatment</span>
+              </div>
+            </div>
+
+            <!-- Brow Item 3 -->
+            <div class="brow-offering-card">
+              <div class="brow-card-top">
+                <div class="brow-num">03</div>
+                <div>
+                  <h3 class="brow-offering-title">Hybrid Staining &amp; Custom Tint</h3>
+                  <span class="brow-offering-time">30 Mins · Lasts up to 6 Wks</span>
+                </div>
+              </div>
+              <p class="brow-offering-desc">
+                Advanced hybrid dye formulation that stains skin for up to 10 days and tints brow hair for 6 weeks. Customized to seamlessly match hair tones and skin undertones.
+              </p>
+              <div class="brow-card-features">
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Custom warm/cool mixing</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Ombré powder effect</span>
+                <span><i class="bi bi-check-lg" aria-hidden="true"></i> Henna-free gentle formula</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Brow Artistry Media Frame -->
+          <div class="brow-media-col">
+            <div class="brow-media-frame">
+              <picture>
+                <source srcset="assets/images/services/services-brow.webp" type="image/webp">
+                <img src="assets/images/services/services-brow.jpg" 
+                     alt="Detailed brow mapping and feathered brow lamination styling" 
+                     class="brow-img" 
+                     width="1600" 
+                     height="1200" 
+                     loading="lazy">
+              </picture>
+              <div class="brow-media-caption">
+                <div class="caption-title">The Complete Brow Duo</div>
+                <p class="caption-sub">Combine Brow Lamination + Hybrid Tint for the ultimate fluffy, defined editorial brow.</p>
+                <a href="contact.html?service=The+Brow+Duo+(Sculpt+%26+Tint)#booking" class="btn-lumiere btn-primary-custom btn-sm-custom">Book The Brow Duo</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5 — CUSTOM DECISION STUDIO (Which Look Suits You?)
+         ========================================================================== -->
+    <section class="services-consultation-section" id="consultationGuide" aria-labelledby="consultationGuideTitle">
+      <div class="container-lumiere">
+        
+        <div class="services-consultation-wrapper">
+          
+          <div class="consultation-header">
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>PERSONALIZED GUIDANCE</span>
+              <span class="eyebrow-line" aria-hidden="true"></span>
+            </div>
+            <h2 class="section-heading-lumiere" id="consultationGuideTitle">
+              Not Sure What Suits You? Find Your Match.
+            </h2>
+            <p class="section-subtext-lumiere">
+              Choosing the right service depends on your natural lash strength, morning routine, and aesthetic goals. Match your vibe with our recommendations below:
+            </p>
+          </div>
+
+          <!-- 4 Persona Quadrants -->
+          <div class="decision-matrix-grid">
+            
+            <div class="matrix-persona-card">
+              <div class="persona-icon-circle"><i class="bi bi-feather" aria-hidden="true"></i></div>
+              <h3 class="persona-name">The Minimalist</h3>
+              <p class="persona-traits">“I love looking polished straight out of bed with zero makeup.”</p>
+              <div class="persona-match-box">
+                <span class="match-badge">RECOMMENDED MATCH</span>
+                <h4 class="match-title">Classic Lash Set or Keratin Lash Lift</h4>
+                <p class="match-desc">Clean, effortless lift that highlights natural length without visible thickness.</p>
+              </div>
+            </div>
+
+            <div class="matrix-persona-card">
+              <div class="persona-icon-circle"><i class="bi bi-palette" aria-hidden="true"></i></div>
+              <h3 class="persona-name">The Modern Romantic</h3>
+              <p class="persona-traits">“I want soft, fluttery dimension with a hint of texture.”</p>
+              <div class="persona-match-box">
+                <span class="match-badge">RECOMMENDED MATCH</span>
+                <h4 class="match-title">Hybrid Extensions + Brow Tint</h4>
+                <p class="match-desc">The perfect blend of lightweight fans and single spikes for feathery framing.</p>
+              </div>
+            </div>
+
+            <div class="matrix-persona-card">
+              <div class="persona-icon-circle"><i class="bi bi-gem" aria-hidden="true"></i></div>
+              <h3 class="persona-name">The Glamour Perfectionist</h3>
+              <p class="persona-traits">“I love a dark, velvety lashline and defined, fluffy brows.”</p>
+              <div class="persona-match-box">
+                <span class="match-badge">RECOMMENDED MATCH</span>
+                <h4 class="match-title">Russian Volume + Brow Lamination</h4>
+                <p class="match-desc">Uniform darkness, maximum fan density, and structured brushed-up brows.</p>
+              </div>
+            </div>
+
+            <div class="matrix-persona-card">
+              <div class="persona-icon-circle"><i class="bi bi-camera" aria-hidden="true"></i></div>
+              <h3 class="persona-name">The Fashion-Forward</h3>
+              <p class="persona-traits">“I want the strip-lash aesthetic with spiky, dynamic peaks.”</p>
+              <div class="persona-match-box">
+                <span class="match-badge">RECOMMENDED MATCH</span>
+                <h4 class="match-title">Wispy Wet-Look Set + Hybrid Brow</h4>
+                <p class="match-desc">Artistic length graduation that elongates eye corners and opens gaze.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Consultation Editorial Showcase (Featuring Studio Aesthetician & Mapping Guide) -->
+          <div class="consultation-showcase-card">
+            <div class="consultation-img-side">
+              <picture>
+                <source srcset="assets/images/services/services-consultation.webp" type="image/webp">
+                <img src="assets/images/services/services-consultation.jpg" 
+                     alt="Personalized eye architecture and lash mapping consultation at Lumière studio" 
+                     class="consultation-img" 
+                     width="1200" 
+                     height="896" 
+                     loading="lazy">
+              </picture>
+              <div class="consultation-img-badge">
+                <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+                <span>1-on-1 Personalized Mapping</span>
+              </div>
+            </div>
+            <div class="consultation-info-side">
+              <div class="section-eyebrow">
+                <span class="eyebrow-line" aria-hidden="true"></span>
+                <span>COMPLIMENTARY RITUAL</span>
+              </div>
+              <h3 class="consultation-showcase-title">10-Minute Bespoke Face &amp; Eye Analysis</h3>
+              <p class="consultation-showcase-desc">
+                Unsure which style complements your eyes? Every full set appointment begins with a personalized consultation where our master artist examines your eyelid anatomy, natural lash strength, and facial symmetry.
+              </p>
+              <ul class="consultation-perks-list">
+                <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Golden ratio eye curvature &amp; ocular spacing diagnosis</li>
+                <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Custom curl (C, CC, D, L), diameter &amp; length blueprint</li>
+                <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Sensitive skin adhesive patch-testing option</li>
+              </ul>
+              <div class="consultation-cta-wrap">
+                <a href="contact.html?service=Bespoke+Lash+%26+Brow+Consultation#booking" class="btn-lumiere btn-primary-custom">
+                  Schedule Consultation
+                </a>
+                <span class="consultation-guarantee"><i class="bi bi-shield-check" aria-hidden="true"></i> Included With All Full Sets</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6 — AFTERCARE & YOUR FINISH (Studio Longevity Guide)
+         ========================================================================== -->
+    <div id="aftercare"></div>
+    <section class="services-aftercare-section" id="aftercareGuide" aria-labelledby="aftercareGuideTitle">
+      <div class="container-lumiere">
+        
+        <div class="services-aftercare-grid">
+          
+          <!-- Left Text & 4-Pillars -->
+          <div class="aftercare-content-col">
+            <div class="section-eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              <span>LONGEVITY &amp; CARE</span>
+            </div>
+            
+            <h2 class="section-heading-lumiere" id="aftercareGuideTitle">
+              The Essential Aftercare Ritual
+            </h2>
+            
+            <p class="aftercare-lead">
+              Flawless lash extensions and brow lamination are a partnership between salon precision and daily home ritual. Follow our 4 core golden rules to extend retention up to 4+ weeks.
+            </p>
+
+            <div class="aftercare-steps-list">
+              
+              <div class="aftercare-step-item">
+                <div class="aftercare-step-num">01</div>
+                <div class="aftercare-step-body">
+                  <h4 class="step-name">Clean Daily with Oil-Free Foam</h4>
+                  <p class="step-text">
+                    Use our gentle botanical lash shampoo to dissolve sebum and makeup oils that break down cyanoacrylate adhesive bonds.
+                  </p>
+                </div>
+              </div>
+
+              <div class="aftercare-step-item">
+                <div class="aftercare-step-num">02</div>
+                <div class="aftercare-step-body">
+                  <h4 class="step-name">Keep Completely Dry for First 24H</h4>
+                  <p class="step-text">
+                    Avoid steam rooms, intense workouts, and heavy moisture during initial adhesive curing to ensure unbreakable attachment.
+                  </p>
+                </div>
+              </div>
+
+              <div class="aftercare-step-item">
+                <div class="aftercare-step-num">03</div>
+                <div class="aftercare-step-body">
+                  <h4 class="step-name">Brush &amp; Fluff When Dry</h4>
+                  <p class="step-text">
+                    Use your complimentary rose-gold silicone spoolie brush only when lashes are fully dry to realign fans without snagging.
+                  </p>
+                </div>
+              </div>
+
+              <div class="aftercare-step-item">
+                <div class="aftercare-step-num">04</div>
+                <div class="aftercare-step-body">
+                  <h4 class="step-name">Schedule 2–3 Week Maintenance Infills</h4>
+                  <p class="step-text">
+                    Natural lashes shed 3–5 hairs per day. 60-minute infills replace shed extensions and maintain full, even volume.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Aftercare Media Frame -->
+          <div class="aftercare-media-col">
+            <div class="aftercare-media-frame">
+              <picture>
+                <source srcset="assets/images/services/services-aftercare.webp" type="image/webp">
+                <img src="assets/images/services/services-aftercare.jpg" 
+                     alt="Lumière luxury aftercare cleansing foam and rose gold spoolie brush" 
+                     class="aftercare-img" 
+                     width="1600" 
+                     height="1100" 
+                     loading="lazy">
+              </picture>
+              <div class="aftercare-floating-card">
+                <i class="bi bi-stars" aria-hidden="true"></i>
+                <div class="card-text">
+                  <strong>Complimentary Aftercare Kit</strong>
+                  <span>Every new client receives a luxury spoolie brush and custom lash care brochure.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7 — FREQUENTLY ASKED QUESTIONS (Services & Treatment Guide)
+         ========================================================================== -->
+    <section class="services-faq-section" id="servicesFaq" aria-labelledby="servicesFaqTitle">
+      <div class="container-lumiere">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>FREQUENT QUESTIONS</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+          </div>
+          <h2 class="section-heading-lumiere" id="servicesFaqTitle">
+            Everything You Need to Know Before Your Visit
+          </h2>
+          <p class="section-subtext-lumiere">
+            Clear, transparent answers to help you choose the ideal lash or brow treatment with complete confidence.
+          </p>
+        </div>
+
+        <div class="services-faq-wrapper">
+          <div class="faq-list">
+            
+            <div class="faq-accordion-item">
+              <button type="button" class="faq-accordion-header" id="sf-faq-h-1" aria-expanded="false" aria-controls="sf-faq-c-1">
+                <span>How do I choose between Lash Extensions and a Keratin Lash Lift?</span>
+                <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="faq-accordion-content" id="sf-faq-c-1" role="region" aria-labelledby="sf-faq-h-1">
+                <div class="faq-body-inner">
+                  <p>Choose <strong>Lash Extensions</strong> if you want added length, density, or customized styling (like cat-eye or wispy spikes) beyond what your natural lashes can produce. Choose a <strong>Keratin Lash Lift &amp; Tint</strong> if you already have decent natural lash length and prefer an ultra-low maintenance, natural mascara look that requires zero infills and lasts 6–8 weeks.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button type="button" class="faq-accordion-header" id="sf-faq-h-2" aria-expanded="false" aria-controls="sf-faq-c-2">
+                <span>Will eyelash extensions or lash lifts damage my natural lashes?</span>
+                <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="faq-accordion-content" id="sf-faq-c-2" role="region" aria-labelledby="sf-faq-h-2">
+                <div class="faq-body-inner">
+                  <p>Never at LUMIÈRE. Damage only occurs when extensions are too heavy or clumped across multiple natural lashes. We practice strict 100% damage-free single-lash isolation and weigh every extension fan precisely to your natural lash strength. Our lash lift solutions are infused with hydrolyzed keratin and peptides to actively strengthen cuticles.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button type="button" class="faq-accordion-header" id="sf-faq-h-3" aria-expanded="false" aria-controls="sf-faq-c-3">
+                <span>How often will I need infill appointments?</span>
+                <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="faq-accordion-content" id="sf-faq-c-3" role="region" aria-labelledby="sf-faq-h-3">
+                <div class="faq-body-inner">
+                  <p>Because natural lashes naturally shed 3–5 hairs each day as part of their biological cycle, we recommend a 60–75 minute maintenance infill every <strong>2 to 3 weeks</strong>. For Brow Lamination and Lash Lifts, treatments are repeated every <strong>6 to 8 weeks</strong> once new brow and lash hairs have grown in.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button type="button" class="faq-accordion-header" id="sf-faq-h-4" aria-expanded="false" aria-controls="sf-faq-c-4">
+                <span>Can I wear eye makeup and shower with lash extensions?</span>
+                <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="faq-accordion-content" id="sf-faq-c-4" role="region" aria-labelledby="sf-faq-h-4">
+                <div class="faq-body-inner">
+                  <p>Yes, with simple precautions! Keep lashes dry for the first 24 hours while medical-grade adhesive cures. Afterwards, daily washing with our oil-free foaming lash shampoo is actually essential to remove oils. You can wear oil-free eyeshadow and eyeliner, but traditional mascara and oil-based makeup removers should be avoided on extensions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button type="button" class="faq-accordion-header" id="sf-faq-h-5" aria-expanded="false" aria-controls="sf-faq-c-5">
+                <span>How should I prepare for my first studio appointment?</span>
+                <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="faq-accordion-content" id="sf-faq-c-5" role="region" aria-labelledby="sf-faq-h-5">
+                <div class="faq-body-inner">
+                  <p>Arrive with squeaky clean, makeup-free eyes and brows. Avoid caffeine right before your appointment so your eyelids remain completely relaxed. If you wear contact lenses, we recommend wearing eyeglasses or bringing your lens case so you can remove them comfortably during application.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 8 — CHOOSE YOUR MOMENT (Studio Closing Invitation)
+         ========================================================================== -->
+    <section class="services-closing-section" aria-labelledby="servicesClosingTitle">
+      <div class="container-lumiere">
+        
+        <div class="services-closing-card">
+          
+          <div class="closing-content-side">
+            <div class="section-eyebrow eyebrow-light">
+              <span class="eyebrow-line line-light" aria-hidden="true"></span>
+              <span>RESERVE YOUR EXPERIENCE</span>
+            </div>
+            
+            <h2 class="services-closing-title" id="servicesClosingTitle">
+              Ready for Effortless Daily Beauty?
+            </h2>
+            
+            <p class="services-closing-desc">
+              Step into the calm sanctuary of LUMIÈRE. Let our master artists craft a bespoke lash and brow design that enhances your authentic facial harmony.
+            </p>
+
+            <div class="closing-actions-row">
+              <a href="contact.html#booking" class="btn-lumiere btn-primary-custom btn-lg-custom">
+                Book an Appointment
+              </a>
+              <a href="pricing.html" class="btn-lumiere btn-outline-light-custom btn-lg-custom">
+                View Pricing Menu
+              </a>
+            </div>
+
+            <div class="closing-guarantee-row">
+              <div class="guarantee-item">
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
+                <span>Satisfaction Guaranteed</span>
+              </div>
+              <div class="guarantee-item">
+                <i class="bi bi-clock" aria-hidden="true"></i>
+                <span>Easy Online Rescheduling</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="closing-media-side">
+            <div class="closing-frame">
+              <picture>
+                <source srcset="assets/images/services/services-closing.webp" type="image/webp">
+                <img src="assets/images/services/services-closing.jpg" 
+                     alt="Lumière lash client enjoying effortless elegance in studio" 
+                     class="closing-img" 
+                     width="1920" 
+                     height="1080" 
+                     loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Exact Same 4-Column Balanced Footer as Index & About)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-lumiere">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Info Column -->
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="navbar-brand-lumiere" aria-label="LUMIÈRE Lash &amp; Brow Homepage">
+            <svg class="brand-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="26" cy="26" r="24.5" stroke="#C89A8B" stroke-width="1.8" opacity="0.65"/>
+              <path d="M13 18C21 11.5 32 12.5 39 17.5" stroke="#C89A8B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 14V32.5C20 35.5 22 37 25 37C29.5 37 35.5 36.2 39.5 33.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 24.5C28 21.5 33.5 22 37.5 26" stroke="#8E5A6B" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="39" cy="17.5" r="2.2" fill="#C89A8B"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name">LUMIÈRE</span>
+              <span class="brand-sub">Lash &amp; Brow Studio</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Defined beauty. Effortless confidence.
+          </p>
+          
+          <!-- Social Icons Immediately Below Tagline -->
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Follow LUMIÈRE on Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: EXPLORE (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: BEAUTY SERVICES (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BEAUTY SERVICES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="services.html" class="footer-link">Lash Extensions</a></li>
+            <li><a href="services.html#lashLift" class="footer-link">Lash Lift</a></li>
+            <li><a href="services.html#browServices" class="footer-link">Brow Services</a></li>
+            <li><a href="services.html#browServices" class="footer-link">Brow Styling</a></li>
+            <li><a href="services.html#browServices" class="footer-link">Lash &amp; Brow Tint</a></li>
+            <li><a href="services.html#aftercareGuide" class="footer-link">Aftercare Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: BOOKING (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">BOOKING</h4>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html#booking" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Booking FAQ</a></li>
+            <li><a href="pricing.html#policies" class="footer-link">Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: STUDIO (6 items) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="about.html#experience" class="footer-link">Beauty Experience</a></li>
+            <li><a href="gallery.html" class="footer-link">Lash Gallery</a></li>
+            <li><a href="services.html#aftercareGuide" class="footer-link">Aftercare Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+            <li><a href="about.html#accessibility" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LUMIÈRE LASH &amp; BROW. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
