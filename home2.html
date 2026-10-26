@@ -153,56 +153,74 @@
   <main id="mainContent">
 
     <!-- ==========================================================================
-         SECTION 1 — THE BEAUTY RITUAL (Cinematic Editorial Hero)
+         SECTION 1 — HERO: THE LUMIÈRE RITUAL (Consistent 2-Column Luxury Layout)
          ========================================================================== -->
-    <section class="h2-hero-section" aria-labelledby="h2HeroTitle">
+    <section class="hero-section h2-hero-section" aria-labelledby="h2HeroTitle">
       <div class="container-lumiere">
-        
-        <div class="h2-hero-card">
-          <!-- Background Visual Frame -->
-          <div class="h2-hero-bg-media">
-            <picture>
-              <source srcset="assets/images/home2/home2-hero.webp" type="image/webp">
-              <img src="assets/images/home2/home2-hero.jpg" 
-                   alt="Lumière Beauty Ritual cinematic editorial portrait showcasing fluttery lashes and groomed brow contours" 
-                   class="h2-hero-img" 
-                   width="1920" 
-                   height="1080" 
-                   fetchpriority="high" 
-                   loading="eager">
-            </picture>
-            <div class="h2-hero-scrim"></div>
-          </div>
-
-          <!-- Hero Content Overlay -->
-          <div class="h2-hero-content-wrap">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
             <div class="h2-hero-badge-marker">
               <span class="h2-marker-num">01 / 07</span>
               <span class="h2-marker-sep">•</span>
               <span class="h2-marker-text">LASH • BROW • RITUAL</span>
             </div>
 
-            <span class="eyebrow h2-hero-eyebrow">THE LUMIÈRE RITUAL</span>
-            <h1 class="h2-hero-heading font-serif" id="h2HeroTitle">
-              A BEAUTIFUL<br>
-              MOMENT,<br>
+            <span class="eyebrow">THE LUMIÈRE RITUAL</span>
+            <h1 class="hero-title" id="h2HeroTitle">
+              A BEAUTIFUL MOMENT,<br>
               <span>JUST FOR YOU.</span>
             </h1>
-            <p class="h2-hero-desc">
+            <p class="hero-text">
               A considered lash and brow experience designed to bring out your natural expression and leave you feeling beautifully yourself.
             </p>
-
-            <div class="h2-hero-actions">
+            <div class="hero-buttons">
               <a href="contact.html#booking" class="btn-lumiere btn-primary-custom">
                 BOOK AN APPOINTMENT
               </a>
-              <a href="#your-visit" class="btn-lumiere btn-h2-outline">
+              <a href="#your-visit" class="btn-lumiere btn-secondary-custom">
                 DISCOVER THE RITUAL <i class="bi bi-arrow-down" aria-hidden="true"></i>
               </a>
             </div>
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <i class="bi bi-sparkles trust-icon" aria-hidden="true"></i>
+                <span class="trust-text">The 4-Stage Ritual</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-shield-check trust-icon" aria-hidden="true"></i>
+                <span class="trust-text">Gentle Premium Care</span>
+              </div>
+            </div>
           </div>
-        </div>
 
+          <!-- Hero Right Image Frame -->
+          <div class="hero-media-wrap">
+            <div class="hero-image-frame">
+              <picture>
+                <source srcset="assets/images/home2/home2-hero.webp" type="image/webp">
+                <img src="assets/images/home2/home2-hero.jpg" 
+                     alt="Lumière Beauty Ritual cinematic editorial portrait showcasing fluttery lashes and groomed brow contours" 
+                     class="hero-image" 
+                     width="1920" 
+                     height="1080" 
+                     fetchpriority="high" 
+                     loading="eager">
+              </picture>
+              <div class="hero-floating-badge">
+                <div class="badge-icon">
+                  <i class="bi bi-moon-stars" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="badge-label">THE BEAUTY RITUAL</div>
+                  <div class="badge-value">Mindful Lash &amp; Brow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -212,8 +230,8 @@
     <section class="h2-journey-section section-spacing-lg" id="your-visit" aria-labelledby="journeyTitle">
       <div class="container-lumiere">
         
-        <div class="h2-section-header text-center">
-          <span class="eyebrow eyebrow-center">YOUR VISIT</span>
+        <div class="h2-section-header text-start">
+          <span class="eyebrow">YOUR VISIT</span>
           <h2 class="section-title" id="journeyTitle">
             From first hello<br>
             to final mirror moment.
@@ -378,8 +396,8 @@
     <section class="h2-mood-section section-spacing-lg" aria-labelledby="moodTitle">
       <div class="container-lumiere">
         
-        <div class="h2-section-header text-center">
-          <span class="eyebrow eyebrow-center">CHOOSE YOUR MOOD</span>
+        <div class="h2-section-header text-start">
+          <span class="eyebrow">CHOOSE YOUR MOOD</span>
           <h2 class="section-title" id="moodTitle">
             Today, your lashes<br>
             can say anything.

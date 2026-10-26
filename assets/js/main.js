@@ -197,10 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let percentage = (x / rect.width) * 100;
 
       if (isRTL) {
-        baLayerAfter.style.width = `${100 - percentage}%`;
+        baLayerAfter.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        baLayerAfter.style.webkitClipPath = `inset(0 0 0 ${percentage}%)`;
         baHandle.style.left = `${percentage}%`;
       } else {
-        baLayerAfter.style.width = `${percentage}%`;
+        baLayerAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        baLayerAfter.style.webkitClipPath = `inset(0 ${100 - percentage}% 0 0)`;
         baHandle.style.left = `${percentage}%`;
       }
     };
@@ -228,17 +230,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('touchend', onPointerUp);
 
     // Keyboard support for before/after handle
+    let currentPercentage = 50;
     baHandle.addEventListener('keydown', (e) => {
-      let currentWidth = parseFloat(baLayerAfter.style.width) || 50;
+      const isRTL = htmlRoot.getAttribute('dir') === 'rtl';
       if (e.key === 'ArrowLeft') {
-        currentWidth = Math.max(0, currentWidth - 5);
+        currentPercentage = Math.max(0, currentPercentage - 5);
       } else if (e.key === 'ArrowRight') {
-        currentWidth = Math.min(100, currentWidth + 5);
+        currentPercentage = Math.min(100, currentPercentage + 5);
       } else {
         return;
       }
-      baLayerAfter.style.width = `${currentWidth}%`;
-      baHandle.style.left = `${currentWidth}%`;
+      if (isRTL) {
+        baLayerAfter.style.clipPath = `inset(0 0 0 ${currentPercentage}%)`;
+        baLayerAfter.style.webkitClipPath = `inset(0 0 0 ${currentPercentage}%)`;
+      } else {
+        baLayerAfter.style.clipPath = `inset(0 ${100 - currentPercentage}% 0 0)`;
+        baLayerAfter.style.webkitClipPath = `inset(0 ${100 - currentPercentage}% 0 0)`;
+      }
+      baHandle.style.left = `${currentPercentage}%`;
     });
   }
 

@@ -21,6 +21,7 @@
   --color-white: #FFFFFF;
   
   /* Semantic Tokens (Light Mode Default) */
+  color-scheme: light;
   --bg-body: #FFF9F6;
   --bg-surface: #FFFFFF;
   --bg-surface-elevated: #F8F1F2;
@@ -49,6 +50,7 @@
   /* Layout & Spacing */
   --container-max: 1280px;
   --nav-height: 88px;
+  --header-btn-height: 44px;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -63,6 +65,7 @@
 
 /* Dark Mode Theme Overrides */
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg-body: #1C1318;
   --bg-surface: #261B21;
   --bg-surface-elevated: #31232B;
@@ -283,6 +286,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   margin-bottom: 0;
   text-align: inherit;
+}
+
+/* Alignment Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-start,
+.text-left {
+  text-align: left;
+}
+
+[dir="rtl"] .text-start,
+[dir="rtl"] .text-left {
+  text-align: right;
 }
 
 /* --------------------------------------------------------------------------
@@ -588,6 +606,40 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.95rem;
 }
 
+/* Maintain strictly consistent height for Theme, RTL, and CTA buttons in the header */
+.navbar-actions .btn-icon {
+  width: var(--header-btn-height);
+  height: var(--header-btn-height);
+  min-width: var(--header-btn-height);
+  min-height: var(--header-btn-height);
+  max-height: var(--header-btn-height);
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.navbar-actions .btn-lumiere,
+.navbar-actions .btn-primary-custom {
+  height: var(--header-btn-height);
+  min-height: var(--header-btn-height);
+  max-height: var(--header-btn-height);
+  padding: 0 1.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 /* Hamburger Button (Mobile / Tablet <= 1280px) */
 .btn-hamburger {
   display: none;
@@ -803,8 +855,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 48px;
   min-height: 48px;
-  padding: 0.85rem 1.1rem;
+  max-height: 48px;
+  padding: 0 1.1rem;
   background: var(--bg-surface-elevated);
   border: 1.5px solid var(--border-subtle);
   border-radius: var(--radius-sm);
@@ -814,6 +868,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: var(--text-main);
   transition: all var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .drawer-toggle-btn:hover {
@@ -823,8 +878,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .drawer-booking-btn {
   width: 100%;
-  min-height: 52px;
-  font-size: 0.86rem;
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 /* --------------------------------------------------------------------------
@@ -1385,6 +1447,15 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.ba-image-layer picture {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .ba-image-layer img {
   position: absolute;
   top: 0;
@@ -1396,13 +1467,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .ba-layer-after {
   z-index: 2;
-  width: 50%;
-  border-right: 2.5px solid var(--color-rose-gold);
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 50% 0 0);
+  -webkit-clip-path: inset(0 50% 0 0);
 }
 
 [dir="rtl"] .ba-layer-after {
-  border-right: none;
-  border-left: 2.5px solid var(--color-rose-gold);
+  clip-path: inset(0 0 0 50%);
+  -webkit-clip-path: inset(0 0 0 50%);
 }
 
 .ba-badge {
@@ -1463,6 +1536,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .ba-handle:hover {
   transform: translateX(-50%) scale(1.12);
+}
+
+.ba-handle::before,
+.ba-handle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2.5px;
+  background: var(--color-rose-gold);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.ba-handle::before {
+  bottom: 100%;
+  height: 999px;
+}
+
+.ba-handle::after {
+  top: 100%;
+  height: 999px;
 }
 
 .transformation-footer {
@@ -1537,6 +1631,8 @@ h1, h2, h3, h4, h5, h6 {
 .pillar-icon-box {
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 1.5px solid var(--border-subtle);
@@ -1545,7 +1641,31 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  margin-bottom: 1.2rem;
+  line-height: 1;
+  margin: 0 auto 1.2rem auto;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.pillar-icon-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pillar-icon-box i::before {
+  display: block;
+  line-height: 1;
+  vertical-align: 0;
+  margin: 0;
+  padding: 0;
 }
 
 [data-theme="dark"] .pillar-icon-box {
@@ -1822,6 +1942,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet & Below (<= 1280px): Responsive Navigation */
 @media (max-width: 1280px) {
+  :root {
+    --header-btn-height: 40px;
+  }
+
   .desktop-nav-menu {
     display: none !important;
   }
@@ -1845,19 +1969,21 @@ h1, h2, h3, h4, h5, h6 {
 
   .navbar-actions .btn-icon {
     display: inline-flex !important;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: var(--header-btn-height, 40px);
+    height: var(--header-btn-height, 40px);
+    min-width: var(--header-btn-height, 40px);
+    min-height: var(--header-btn-height, 40px);
+    max-height: var(--header-btn-height, 40px);
     font-size: 1.05rem;
   }
   
   .btn-hamburger {
     display: flex !important;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: var(--header-btn-height, 40px);
+    height: var(--header-btn-height, 40px);
+    min-width: var(--header-btn-height, 40px);
+    min-height: var(--header-btn-height, 40px);
+    max-height: var(--header-btn-height, 40px);
   }
   
   .signature-grid {
@@ -2086,144 +2212,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   H2.2. SECTION 1 — CINEMATIC HERO (THE BEAUTY RITUAL)
+   H2.2. SECTION 1 — HERO: THE LUMIÈRE RITUAL (CONSISTENT 2-COLUMN LAYOUT)
    -------------------------------------------------------------------------- */
 .h2-hero-section {
   position: relative;
-  padding: clamp(24px, 3.5vw, 44px) 0 clamp(40px, 5vw, 68px);
-  background-color: var(--bg-body);
-}
-
-.h2-hero-card {
-  position: relative;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1.5px solid rgba(200, 154, 139, 0.35);
-  min-height: clamp(520px, 72vh, 680px);
-  display: flex;
-  align-items: center;
-  background-color: var(--color-espresso);
-}
-
-.h2-hero-bg-media {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.h2-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center right;
-}
-
-[dir="rtl"] .h2-hero-img {
-  object-position: center left;
-}
-
-.h2-hero-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(43, 31, 36, 0.88) 0%,
-    rgba(43, 31, 36, 0.72) 42%,
-    rgba(43, 31, 36, 0.22) 80%,
-    transparent 100%
-  );
-}
-
-[dir="rtl"] .h2-hero-scrim {
-  background: linear-gradient(
-    270deg,
-    rgba(43, 31, 36, 0.88) 0%,
-    rgba(43, 31, 36, 0.72) 42%,
-    rgba(43, 31, 36, 0.22) 80%,
-    transparent 100%
-  );
-}
-
-.h2-hero-content-wrap {
-  position: relative;
-  z-index: 2;
-  max-width: 620px;
-  padding: clamp(36px, 6vw, 72px);
-  color: #FFFFFF;
 }
 
 .h2-hero-badge-marker {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.35rem 0.95rem;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.38rem 0.95rem;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: var(--color-dusty-rose);
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+[data-theme="dark"] .h2-hero-badge-marker {
+  background: var(--bg-surface-elevated);
+  border-color: var(--border-subtle);
   color: var(--color-rose-gold);
-  margin-bottom: 1.4rem;
 }
 
 .h2-marker-sep {
-  opacity: 0.6;
-}
-
-.h2-hero-eyebrow {
-  color: var(--color-rose-gold) !important;
-  display: block;
-  margin-bottom: 0.8rem;
-}
-
-.h2-hero-heading {
-  font-size: clamp(2.4rem, 4.4vw, 4.2rem);
-  font-weight: 600;
-  line-height: 1.08;
-  color: #FFFFFF;
-  margin-bottom: 1.35rem;
-}
-
-.h2-hero-heading span {
-  font-style: italic;
-  font-weight: 500;
+  opacity: 0.55;
   color: var(--color-rose-gold);
 }
 
-.h2-hero-desc {
-  font-size: clamp(1.02rem, 1.28vw, 1.18rem);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.68;
-  margin-bottom: 2.3rem;
-  max-width: 500px;
-}
 
-.h2-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.15rem;
-}
-
-.btn-h2-outline {
-  background: transparent;
-  color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-}
-
-.btn-h2-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  transform: translateY(-2px);
-}
 
 /* --------------------------------------------------------------------------
    H2.3. SECTION 2 — YOUR VISIT (4-STAGE BEAUTY JOURNEY)
@@ -2234,7 +2257,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .h2-section-header {
   max-width: 720px;
-  margin: 0 auto clamp(36px, 5vw, 60px);
+  margin: 0 0 clamp(36px, 5vw, 60px) 0;
+  text-align: left;
+}
+
+[dir="rtl"] .h2-section-header {
+  text-align: right;
+  margin: 0 0 clamp(36px, 5vw, 60px) auto;
 }
 
 .h2-journey-layout {
@@ -2795,19 +2824,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet (<= 1280px) */
 @media (max-width: 1280px) {
-  .h2-hero-content-wrap {
-    text-align: center;
-    max-width: 720px;
+  .h2-hero-badge-marker {
     margin-inline: auto;
-  }
-
-  .h2-hero-badge-marker,
-  .h2-hero-eyebrow {
-    margin-inline: auto;
-  }
-
-  .h2-hero-actions {
-    justify-content: center;
   }
 
   .h2-journey-layout,
@@ -2887,9 +2905,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 
-  .h2-hero-card {
-    min-height: 480px;
-  }
+
 }
 
 /* Mobile & Small Tablets (<= 768px) */
@@ -2913,23 +2929,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0.95rem;
   }
 
-  .h2-hero-content-wrap {
-    padding: 2.2rem 1.6rem;
-  }
 
-  .h2-hero-card {
-    min-height: 440px;
-  }
-
-  .h2-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .h2-hero-actions .btn-lumiere {
-    width: 100%;
-  }
 
   .h2-mirror-card {
     padding: 2rem 1.5rem;
@@ -2996,6 +2996,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform var(--transition-slow);
 }
 
@@ -3128,7 +3129,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-philosophy-header {
   max-width: 760px;
-  margin: 0 auto clamp(36px, 5vw, 56px);
+  margin: 0 0 clamp(36px, 5vw, 56px) 0;
+  text-align: left;
+}
+
+[dir="rtl"] .about-philosophy-header {
+  text-align: right;
+  margin: 0 0 clamp(36px, 5vw, 56px) auto;
 }
 
 .about-philosophy-grid {
@@ -3440,6 +3447,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-exp-content-block {
   padding: clamp(34px, 5vw, 60px);
+}
+
+.about-exp-header {
+  max-width: 680px;
+  margin: 0 0 clamp(28px, 4vw, 44px) 0;
+  text-align: left;
+}
+
+[dir="rtl"] .about-exp-header {
+  text-align: right;
+  margin: 0 0 clamp(28px, 4vw, 44px) auto;
 }
 
 .about-exp-quadrants {
@@ -7622,6 +7640,52 @@ h1, h2, h3, h4, h5, h6 {
 textarea.form-control-lumiere {
   resize: vertical;
   min-height: 120px;
+}
+
+/* Date & Time Picker Controls */
+input[type="date"].form-control-lumiere,
+input[type="time"].form-control-lumiere {
+  color-scheme: light;
+}
+
+input[type="date"].form-control-lumiere::-webkit-calendar-picker-indicator,
+input[type="time"].form-control-lumiere::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+input[type="date"].form-control-lumiere::-webkit-calendar-picker-indicator:hover,
+input[type="time"].form-control-lumiere::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Clear Dark Mode Calendar Picker Indicator Visibility */
+[data-theme="dark"] input[type="date"].form-control-lumiere,
+[data-theme="dark"] input[type="time"].form-control-lumiere,
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] input[type="date"].form-control-lumiere::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"].form-control-lumiere::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.95;
+  filter: brightness(2.8) sepia(0.2) saturate(1.8) hue-rotate(310deg);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), filter var(--transition-fast);
+}
+
+[data-theme="dark"] input[type="date"].form-control-lumiere::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="time"].form-control-lumiere::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: brightness(3.2) sepia(0.2) saturate(1.8) hue-rotate(310deg);
 }
 
 .booking-status-alert {
